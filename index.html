@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    body { background-color: #111; color: #fff; }
+    body { background-color: #111; color: #fff; overflow-x: hidden; }
 
     header {
       position: relative;
@@ -19,10 +19,10 @@
 
     .slider-container {
       position: absolute;
-      width: 100%;
+      width: 400%;
       height: 100%;
       display: flex;
-      animation: slide 24s infinite;
+      animation: slide 28s infinite;
     }
 
     .slide {
@@ -37,21 +37,17 @@
     }
 
     @keyframes slide {
-      0%   { transform: translateX(0%); }
-      25%  { transform: translateX(0%); }
-      30%  { transform: translateX(-100%); }
-      55%  { transform: translateX(-100%); }
-      60%  { transform: translateX(-200%); }
-      85%  { transform: translateX(-200%); }
-      90%  { transform: translateX(-300%); }
-      100% { transform: translateX(-300%); }
+      0%, 20% { transform: translateX(0%); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 100% { transform: translateX(-300%); }
     }
 
     .overlay {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85));
       z-index: 1;
     }
 
@@ -77,24 +73,39 @@
     }
 
     @keyframes shimmer {
-      0%, 100% { text-shadow: 0 0 10px #999; }
+      0%, 100% { text-shadow: 0 0 10px #888; }
       50% { text-shadow: 0 0 20px #f5c518, 0 0 40px #f5c518; }
     }
 
     .coin {
       margin: 30px auto;
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      background: radial-gradient(#ccc, #444);
-      animation: spin 4s linear infinite;
+      background: radial-gradient(circle at center, #ddd 0%, #555 100%);
+      animation: rotateCoin 4s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #111;
       border: 3px solid #f5c518;
+      position: relative;
+      z-index: 3;
     }
 
-    @keyframes spin {
+    @keyframes rotateCoin {
       from { transform: rotateY(0deg); }
       to { transform: rotateY(360deg); }
     }
+
+    /* Scroll Parallax Effect */
+    window.addEventListener('scroll', function () {
+      const coin = document.querySelector('.coin');
+      const scrollY = window.scrollY;
+      coin.style.transform = rotateY(${scrollY}deg) translateY(${scrollY * 0.1}px);
+    });
 
     section {
       padding: 60px 20px;
@@ -162,16 +173,16 @@
 <header>
   <div class="slider-container">
     <div class="slide"><img src="https://images.unsplash.com/photo-1618826411644-e2f3a8efb5a7?auto=format&fit=crop&w=1600&q=80" alt="Steel Industry"></div>
-    <div class="slide"><img src="https://images.unsplash.com/photo-1581094271921-990bdc6cdd53?auto=format&fit=crop&w=1600&q=80" alt="Iron Blocks"></div>
     <div class="slide"><img src="https://images.unsplash.com/photo-1609840114624-cbb897bd3bd0?auto=format&fit=crop&w=1600&q=80" alt="Metal Furnace"></div>
-    <div class="slide"><img src="https://images.unsplash.com/photo-1586864387788-5ef042ec7c35?auto=format&fit=crop&w=1600&q=80" alt="Metal Storage"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1581094271921-990bdc6cdd53?auto=format&fit=crop&w=1600&q=80" alt="Iron Scrap"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1586864387788-5ef042ec7c35?auto=format&fit=crop&w=1600&q=80" alt="Warehouse"></div>
   </div>
   <div class="overlay"></div>
   <div class="hero-text">
     <h1>Gera Enterprise</h1>
     <p>Ferrous & Non-Ferrous Iron and Steel Trading</p>
     <p>Established Since 1979</p>
-    <div class="coin"></div>
+    <div class="coin">GE</div>
   </div>
 </header>
 <section id="products">
