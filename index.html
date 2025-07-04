@@ -3,131 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Gera Enterprise - Trusted Ferrous and Non-Ferrous Iron and Steel Scrap Traders since 1979">
-  <meta name="keywords" content="Ferrous, Non-Ferrous, Iron, Steel, Scrap Trading, Gera Enterprise, Metal Traders">
-  <meta name="author" content="Gera Enterprise">
   <title>Gera Enterprise – Ferrous & Non-Ferrous Iron and Steel Trading</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <meta name="description" content="Gera Enterprise is a trusted iron and steel scrap trading company dealing in ferrous and non-ferrous metals across India and internationally.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body { background-color: #111; color: #fff; }
+    header { position: relative; height: 100vh; overflow: hidden; }
+    .slider { position: absolute; width: 100%; height: 100%; animation: fade 15s infinite; background-size: cover; background-position: center; z-index: -2; }
+    .overlay { position: absolute; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)); z-index: -1; }
+    .hero-text { position: relative; top: 50%; transform: translateY(-50%); text-align: center; padding: 0 20px; }
+    .hero-text h1 { font-size: 3rem; color: #f5c518; animation: shimmer 3s infinite; }
+    .hero-text p { font-size: 1.2rem; margin-top: 10px; color: #eee; }
+    @keyframes fade {
+      0%   { background-image: url('https://images.unsplash.com/photo-1618826411644-e2f3a8efb5a7?auto=format&fit=crop&w=1600&q=80'); }
+      33%  { background-image: url('https://images.unsplash.com/photo-1581094271921-990bdc6cdd53?auto=format&fit=crop&w=1600&q=80'); }
+      66%  { background-image: url('https://images.unsplash.com/photo-1609840114624-cbb897bd3bd0?auto=format&fit=crop&w=1600&q=80'); }
     }
-    body {
-      background-image: url('https://images.unsplash.com/photo-1581092580501-0217c73ab89e?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
+    @keyframes shimmer {
+      0% { text-shadow: 0 0 10px #999; }
+      50% { text-shadow: 0 0 20px #f5c518, 0 0 30px #f5c518; }
+      100% { text-shadow: 0 0 10px #999; }
     }
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 80px 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: #f5c518;
-      text-shadow: 2px 2px #000;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      color: #ddd;
-    }
-    section {
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 60px 20px;
-      text-align: center;
-    }
-    section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 30px;
-      color: #f5c518;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      font-size: 1.2rem;
-      margin: 12px 0;
-      color: #eee;
-    }
-    .contact {
-      background-color: rgba(255, 255, 255, 0.05);
-      padding: 40px 20px;
-    }
-    .contact p {
-      margin: 8px 0;
-      font-size: 1rem;
-      color: #ccc;
-    }
-    footer {
-      padding: 20px;
-      background-color: #111;
-      font-size: 0.9rem;
-      text-align: center;
-      color: #888;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-    .whatsapp-float img {
-      width: 55px;
-      height: 55px;
-    }
+    section { padding: 60px 20px; text-align: center; background-color: #1c1c1c; }
+    section h2 { font-size: 2rem; color: #f5c518; margin-bottom: 20px; }
+    section ul li { font-size: 1.1rem; margin: 10px 0; }
+    .about { background-color: #151515; }
+    .contact { background-color: #101010; }
+    .contact p { margin: 8px 0; }
+    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
+    .whatsapp-btn a img { width: 55px; height: 55px; }
+    footer { background-color: #000; text-align: center; padding: 20px; font-size: 0.9rem; color: #888; }
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      section h2 {
-        font-size: 1.5rem;
-      }
+      .hero-text h1 { font-size: 2rem; }
+      .hero-text p { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
+<header>
+  <div class="slider"></div>
+  <div class="overlay"></div>
+  <div class="hero-text">
     <h1>Gera Enterprise</h1>
     <p>Ferrous & Non-Ferrous Iron and Steel Trading</p>
     <p>Established Since 1979</p>
-  </header>
+  </div>
+</header>
 
-  <section>
-    <h2>We Deal In</h2>
-    <ul>
-      <li>✔ Ferrous Scrap – HMS, MS Plates, Cast Iron</li>
-      <li>✔ Non-Ferrous Scrap – Copper, Brass, Aluminium</li>
-    </ul>
-  </section>
+<section>
+  <h2>We Deal In</h2>
+  <ul>
+    <li>✔ Ferrous Scrap – HMS, MS Plates, Cast Iron</li>
+    <li>✔ Non-Ferrous Scrap – Copper, Brass, Aluminium</li>
+  </ul>
+</section>
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 +91 9814452000</p>
-    <p>📞 +91 9779705252</p>
-    <p>📧 geraenterprises79@gmail.com</p>
-  </section>
+<section class="about">
+  <h2>About Us</h2>
+  <p>Gera Enterprise is a trusted name in iron and steel scrap trading since 1979, dealing in both ferrous and non-ferrous materials across India and internationally. We believe in transparency, quality, and long-term client relationships.</p>
+</section>
 
-  <a href="https://wa.me/919814452000" class="whatsapp-float" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat">
-  </a>
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>📞 +91 9814452000</p>
+  <p>📞 +91 9779705252</p>
+  <p>📧 geraenterprises79@gmail.com</p>
+</section>
 
-  <footer>
-    &copy; 2025 Gera Enterprise. All rights reserved.
-  </footer>
+<div class="whatsapp-btn">
+  <a href="https://wa.me/919814452000" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat 1"></a>
+  <a href="https://wa.me/919779705252" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat 2"></a>
+</div>
 
-  <!-- 
-    Credits: Template originally based on "Solid State" by HTML5 UP
-    https://html5up.net/solid-state | License: Creative Commons Attribution 3.0
-    These credits are required by license but intentionally hidden from UI.
-  -->
+<footer>
+  &copy; 2025 Gera Enterprise. All rights reserved.
+</footer>
+
+<!-- 
+  Hidden credits: Template based on "Solid State" by HTML5 UP — CC BY 3.0
+-->
 
 </body>
 </html>
