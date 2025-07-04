@@ -1,438 +1,133 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gera Enterprise</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Gera Enterprise - Trusted Ferrous and Non-Ferrous Iron and Steel Scrap Traders since 1979">
+  <meta name="keywords" content="Ferrous, Non-Ferrous, Iron, Steel, Scrap Trading, Gera Enterprise, Metal Traders">
+  <meta name="author" content="Gera Enterprise">
+  <title>Gera Enterprise – Ferrous & Non-Ferrous Iron and Steel Trading</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
     }
-
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
+      background-image: url('https://images.unsplash.com/photo-1581092580501-0217c73ab89e?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
       color: #fff;
-      overflow-x: hidden;
     }
-
-    /* Navigation Bar */
-    nav {
-      width: 100%;
-      padding: 1.2rem 2rem;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ffcc00;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin-left: 2rem;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1rem;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    /* Hero Section with Animated Overlay */
-    .hero {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #111;
-      overflow: hidden;
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 80px 20px;
       text-align: center;
-      padding: 4rem 2rem 2rem;
     }
-
-    .hero .background-overlay {
-      content: "IRON & STEEL TRADING";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 8vw;
-      font-weight: 900;
-      color: rgba(255, 255, 255, 0.05);
-      transform: translate(-50%, -50%);
-      white-space: nowrap;
-      z-index: 0;
-      animation: bgTextMove 10s linear infinite;
-      pointer-events: none;
+    header h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #f5c518;
+      text-shadow: 2px 2px #000;
     }
-
-    .hero h1, .hero h2, .hero p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      color: #fff;
-      animation: fadeInDown 1s ease-out;
-    }
-
-    .hero h2 {
-      font-size: 1.5rem;
-      color: #ffcc00;
-      margin-top: 1rem;
-      animation: fadeInUp 1.2s ease-out;
-      letter-spacing: 1px;
-    }
-
-    .hero p {
-      font-size: 1rem;
-      color: #ccc;
-      margin-top: 1rem;
-      animation: fadeInUp 1.4s ease-out;
-    }
-
-    /* Sections */
-    section {
-      padding: 5rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    #about h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1rem;
-      color: #ffcc00;
-    }
-
-    #about p {
-      font-size: 1.1rem;
-      line-height: 1.8;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
       color: #ddd;
     }
-
-    /* WhatsApp Chat Button */
+    section {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      color: #f5c518;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      font-size: 1.2rem;
+      margin: 12px 0;
+      color: #eee;
+    }
+    .contact {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px 20px;
+    }
+    .contact p {
+      margin: 8px 0;
+      font-size: 1rem;
+      color: #ccc;
+    }
+    footer {
+      padding: 20px;
+      background-color: #111;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #888;
+    }
     .whatsapp-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      z-index: 1000;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
     }
-
-    .whatsapp-float i {
-      margin-top: 15px;
+    .whatsapp-float img {
+      width: 55px;
+      height: 55px;
     }
-
-    /* Animations */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes bgTextMove {
-      0% { transform: translate(-50%, -50%) scale(1); }
-      50% { transform: translate(-50%, -50%) scale(1.1); }
-      100% { transform: translate(-50%, -50%) scale(1); }
-    }
-
-    @media(max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .hero h2 { font-size: 1.2rem; }
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #777;
-      padding: 2rem;
-    }
-
-    footer a {
-      color: #999;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo">Gera Enterprise</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="background-overlay"></div>
+  <header>
     <h1>Gera Enterprise</h1>
-    <h2>Iron and Steel Trading</h2>
-    <p>Established since 1979</p>
-    <p>📞 +91 9814452000 | +91 9779705252<br>✉ geraenterprises79@gmail.com</p>
+    <p>Ferrous & Non-Ferrous Iron and Steel Trading</p>
+    <p>Established Since 1979</p>
+  </header>
+
+  <section>
+    <h2>Our Products</h2>
+    <ul>
+      <li>✔ Ferrous Scrap – HMS, MS Plates, Cast Iron</li>
+      <li>✔ Non-Ferrous Scrap – Copper, Brass, Aluminium</li>
+    </ul>
   </section>
 
-  <!-- About Us -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Gera Enterprise is a trusted name in the Indian iron and steel trading industry, proudly serving clients since 1979. 
-      With decades of experience and deep market knowledge, we are known for our commitment to quality, transparency, and timely service.
-      Whether it's structural steel, industrial supply, or specialty requirements, we cater to businesses across India with professionalism and precision.
-      At Gera Enterprise, our legacy is built on trust — and our future is built on delivering excellence.
-    </p>
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91 9814452000</p>
+    <p>📞 +91 9779705252</p>
+    <p>📧 geraenterprises79@gmail.com</p>
   </section>
 
-  <!-- WhatsApp Button -->
   <a href="https://wa.me/919814452000" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Chat">
   </a>
 
-  <!-- Legal Credit Footer -->
   <footer>
-    © 2025 Gera Enterprise. Design adapted from <a href="https://html5up.net/solid-state" target="_blank">Solid State</a> by HTML5 UP.
+    &copy; 2025 Gera Enterprise. All rights reserved.
   </footer>
 
+  <!-- 
+    Credits: Template originally based on "Solid State" by HTML5 UP
+    https://html5up.net/solid-state | License: Creative Commons Attribution 3.0
+    These credits are required by license but intentionally hidden from UI.
+  -->
+
 </body>
-=======
-<!DOCTYPE HTML>
-<!--
-
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Gera Enterprise</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Gera Enterprise</a></h1>
-						<nav>
-							<a href="#contact">Contact</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
-							<h2>Gera Enterprise</h2>
-							<p>Another free + fully responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
-						</div>
-					</section>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Magna arcu feugiat</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Tempus adipiscing</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Nullam dignissim</h2>
-										<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-										<a href="#" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Vitae phasellus</h2>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
-									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
-									</ul>
-								</div>
-							</section>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-
-                                                                <li class="icon solid fa-phone">‪+91 9779705252‬</li>
-
-                                                                <li class="icon solid fa-phone">‪+91 9814452000‬</li>
-
-                                                                <li class="icon solid fa-envelope">
-                                                                <a href="mailto:geraenterprises79@gmail.com">geraenterprises79          
-                                                                @gmail.com</a>
-                                                                </li>
-
-information@untitled.tld</a></li>
-
-
-								</li>
-                                                                <li class="icon brands fa-twitter"><a href="#">twitter.com/untitled
-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Gera Enterprise . All rights reserved.</li><li>Design: <a href="http://html5up.net">Solid State by HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
->>>>>>> cdd24e2719fc2651b9017f5dcd3efc41e3f31a7a
 </html>
