@@ -9,29 +9,50 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
     body { background-color: #111; color: #fff; }
-    header { position: relative; height: 100vh; overflow: hidden; }
-    .slider {
+
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slider-container {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-size: cover;
-      background-position: center;
-      animation: slider 18s infinite;
-      z-index: -2;
+      display: flex;
+      animation: slide 24s infinite;
     }
 
-    @keyframes slider {
-      0% { background-image: url('https://images.unsplash.com/photo-1618826411644-e2f3a8efb5a7?auto=format&fit=crop&w=1600&q=80'); }
-      33% { background-image: url('https://images.unsplash.com/photo-1581094271921-990bdc6cdd53?auto=format&fit=crop&w=1600&q=80'); }
-      66% { background-image: url('https://images.unsplash.com/photo-1609840114624-cbb897bd3bd0?auto=format&fit=crop&w=1600&q=80'); }
+    .slide {
+      flex: 0 0 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @keyframes slide {
+      0%   { transform: translateX(0%); }
+      25%  { transform: translateX(0%); }
+      30%  { transform: translateX(-100%); }
+      55%  { transform: translateX(-100%); }
+      60%  { transform: translateX(-200%); }
+      85%  { transform: translateX(-200%); }
+      90%  { transform: translateX(-300%); }
+      100% { transform: translateX(-300%); }
     }
 
     .overlay {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8));
-      z-index: -1;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+      z-index: 1;
     }
 
     .hero-text {
@@ -40,6 +61,7 @@
       transform: translateY(-50%);
       text-align: center;
       padding: 0 20px;
+      z-index: 2;
     }
 
     .hero-text h1 {
@@ -59,6 +81,21 @@
       50% { text-shadow: 0 0 20px #f5c518, 0 0 40px #f5c518; }
     }
 
+    .coin {
+      margin: 30px auto;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(#ccc, #444);
+      animation: spin 4s linear infinite;
+      border: 3px solid #f5c518;
+    }
+
+    @keyframes spin {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(360deg); }
+    }
+
     section {
       padding: 60px 20px;
       text-align: center;
@@ -68,23 +105,6 @@
       font-size: 2rem;
       color: #f5c518;
       margin-bottom: 20px;
-    }
-
-    section ul {
-      list-style: none;
-    }
-
-    section ul li {
-      font-size: 1.1rem;
-      margin: 10px 0;
-    }
-
-    .about {
-      background-color: #151515;
-    }
-
-    .products {
-      background-color: #1a1a1a;
     }
 
     .product-grid {
@@ -113,14 +133,6 @@
       margin-bottom: 10px;
     }
 
-    .contact {
-      background-color: #101010;
-    }
-
-    .contact p {
-      margin: 8px 0;
-    }
-
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -128,7 +140,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      z-index: 1000;
+      z-index: 999;
     }
 
     .whatsapp-btn a img {
@@ -143,43 +155,63 @@
       font-size: 0.9rem;
       color: #888;
     }
-
-    @media (max-width: 768px) {
-      .hero-text h1 { font-size: 2rem; }
-      .hero-text p { font-size: 1rem; }
-    }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="slider"></div>
+  <div class="slider-container">
+    <div class="slide"><img src="https://images.unsplash.com/photo-1618826411644-e2f3a8efb5a7?auto=format&fit=crop&w=1600&q=80" alt="Steel Industry"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1581094271921-990bdc6cdd53?auto=format&fit=crop&w=1600&q=80" alt="Iron Blocks"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1609840114624-cbb897bd3bd0?auto=format&fit=crop&w=1600&q=80" alt="Metal Furnace"></div>
+    <div class="slide"><img src="https://images.unsplash.com/photo-1586864387788-5ef042ec7c35?auto=format&fit=crop&w=1600&q=80" alt="Metal Storage"></div>
+  </div>
   <div class="overlay"></div>
   <div class="hero-text">
     <h1>Gera Enterprise</h1>
     <p>Ferrous & Non-Ferrous Iron and Steel Trading</p>
     <p>Established Since 1979</p>
+    <div class="coin"></div>
   </div>
 </header>
-
-<section class="products">
+<section id="products">
   <h2>We Deal In</h2>
   <div class="product-grid">
-    <div><img src="https://images.unsplash.com/photo-1607361805730-1a11e212d218?auto=format&fit=crop&w=600&q=80" alt="HMS Scrap"><p>HMS Scrap</p></div>
-    <div><img src="https://images.unsplash.com/photo-1586864387788-5ef042ec7c35?auto=format&fit=crop&w=600&q=80" alt="MS Plates"><p>MS Plates</p></div>
-    <div><img src="https://images.unsplash.com/photo-1655418727490-dca5a212de8d?auto=format&fit=crop&w=600&q=80" alt="Cast Iron"><p>Cast Iron</p></div>
-    <div><img src="https://images.unsplash.com/photo-1622222888884-39a7c3b1705b?auto=format&fit=crop&w=600&q=80" alt="Copper"><p>Copper</p></div>
-    <div><img src="https://images.unsplash.com/photo-1585487000160-4c45f3ba2a00?auto=format&fit=crop&w=600&q=80" alt="Brass"><p>Brass</p></div>
-    <div><img src="https://images.unsplash.com/photo-1610116306796-4d0c1d437104?auto=format&fit=crop&w=600&q=80" alt="Aluminium"><p>Aluminium</p></div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1609859848814-276a5c68a88f?auto=format&fit=crop&w=800&q=80" alt="HMS Scrap">
+      <p>HMS Scrap</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1627030037765-abbfdf40e2d1?auto=format&fit=crop&w=800&q=80" alt="MS Plates">
+      <p>MS Plates</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1587574293340-592bbaefed49?auto=format&fit=crop&w=800&q=80" alt="Cast Iron">
+      <p>Cast Iron</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1610910749484-4a1d4e3aeb62?auto=format&fit=crop&w=800&q=80" alt="Copper Scrap">
+      <p>Copper Scrap</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1619855803330-0f4e058fc2e3?auto=format&fit=crop&w=800&q=80" alt="Brass Scrap">
+      <p>Brass Scrap</p>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1586339949252-19d6c1cfb8b2?auto=format&fit=crop&w=800&q=80" alt="Aluminium Scrap">
+      <p>Aluminium Scrap</p>
+    </div>
   </div>
 </section>
 
-<section class="about">
+<section id="about">
   <h2>About Us</h2>
-  <p>Gera Enterprise is a trusted name in iron and steel scrap trading since 1979, dealing in both ferrous and non-ferrous materials across India and internationally. We believe in transparency, quality, and long-term client relationships.</p>
+  <p style="max-width: 700px; margin: auto;">
+    Gera Enterprise is a trusted trading company dealing in ferrous and non-ferrous iron and steel scrap. Established since 1979, we operate across India and internationally, delivering quality products and maintaining long-term relationships with our clients.
+  </p>
 </section>
 
-<section class="contact">
+<section id="contact">
   <h2>Contact Us</h2>
   <p>📞 +91 9814452000</p>
   <p>📞 +91 9779705252</p>
@@ -187,16 +219,17 @@
 </section>
 
 <div class="whatsapp-btn">
-  <a href="https://wa.me/919814452000" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp"></a>
-  <a href="https://wa.me/919779705252" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp"></a>
+  <a href="https://wa.me/919814452000" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat 1"></a>
+  <a href="https://wa.me/919779705252" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat 2"></a>
 </div>
 
 <footer>
-  &copy; 2025 Gera Enterprise. All rights reserved.
+  <!-- Hidden credit for legal reasons -->
+  <div style="display:none;">
+    Template adapted from Solid State by HTML5 UP (html5up.net) | License: Creative Commons Attribution 3.0
+  </div>
+  <p>&copy; 2025 Gera Enterprise. All rights reserved.</p>
 </footer>
 
-<!-- 
-  Hidden credits: Template inspired by "Solid State" by HTML5 UP — CC BY 3.0.
--->
 </body>
 </html>
