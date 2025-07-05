@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gera Enterprise – Ferrous & Non‑Ferrous Iron and Steel Trading</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -143,13 +143,14 @@
     <h2>We Deal In</h2>
     <div class="product-grid">
       <div><img src="https://images.unsplash.com/photo-1609859848814-276a5c68a88f?auto=format&fit=crop&w=800&q=80"><p>HMS Scrap</p></div>
-      <div><img src="https://images.unsplash.com/photo-1627030037765-abbfdf40e2d1?auto=format&fit=crop&w=800&q=80"><p>MS Plates</p></div>
+      <div><img src="="https://images.unsplash.com/photo-1627030037765-abbfdf40e2d1?auto=format&fit=crop&w=800&q=80"><p>MS Plates</p></div>
       <div><img src="https://images.unsplash.com/photo-1587574293340-592bbaefed49?auto=format&fit=crop&w=800&q=80"><p>Cast Iron</p></div>
       <div><img src="https://images.unsplash.com/photo-1610910749484-4a1d4e3aeb62?auto=format&fit=crop&w=800&q=80"><p>Copper Scrap</p></div>
       <div><img src="https://images.unsplash.com/photo-1619855803330-0f4e058fc2e3?auto=format&fit=crop&w=800&q=80"><p>Brass Scrap</p></div>
       <div><img src="https://images.unsplash.com/photo-1586339949252-19d6c1cfb8b2?auto=format&fit=crop&w=800&q=80"><p>Aluminium Scrap</p></div>
     </div>
   </section>
+
   <section id="about">
     <h2>About Us</h2>
     <p>Gera Enterprise is a trusted iron and steel trading company, dealing in ferrous and non-ferrous scrap across India and internationally. With a legacy since 1979, we are known for reliability, transparency, and timely delivery in the industrial metal sector.</p>
@@ -174,7 +175,7 @@
     © Gera Enterprise 2025
   </footer>
 
-  <!-- 3D GE Cube Script -->
+  <!-- GE Cube JavaScript -->
   <script>
     const canvas = document.getElementById("geCube");
     const ctx = canvas.getContext("2d");
@@ -197,7 +198,7 @@
       ctx.fill();
       ctx.stroke();
 
-      ctx.fillStyle = "#333";
+      ctx.fillStyle = "#111";
       ctx.font = "bold 16px sans-serif";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
@@ -214,7 +215,6 @@
 
     animate();
 
-    // Allow manual drag rotation
     let isDragging = false;
     let lastX = 0;
     canvas.addEventListener("mousedown", (e) => {
