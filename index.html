@@ -2,254 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gera Enterprise – Ferrous & Non‑Ferrous Iron and Steel Trading</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: #111; color: #fff; overflow-x: hidden; }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gera Enterprise</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
 
-    header { position: relative; height: 100vh; overflow: hidden; }
-    .slider { display: flex; width: 400%; height: 100%; animation: slide 20s infinite ease-in-out; }
-    .slider img { width: 25%; object-fit: cover; height: 100vh; }
+  <style>
+    /* --- Premium Background Slider --- */
+    .image-slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: 400px;
+      margin: 40px 0;
+      border-radius: 6px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: calc(100% * 7);
+      height: 100%;
+      animation: slide 35s infinite linear;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     @keyframes slide {
-      0%, 20% { transform: translateX(0%); }
-      25%, 45% { transform: translateX(-25%); }
-      50%, 70% { transform: translateX(-50%); }
-      75%, 100% { transform: translateX(-75%); }
+      0%   { transform: translateX(0%); }
+      14%  { transform: translateX(-100%); }
+      28%  { transform: translateX(-200%); }
+      42%  { transform: translateX(-300%); }
+      57%  { transform: translateX(-400%); }
+      71%  { transform: translateX(-500%); }
+      85%  { transform: translateX(-600%); }
+      100% { transform: translateX(-700%); }
     }
 
-    .overlay {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.95)); z-index: 1;
-    }
-
-    .hero {
-      position: absolute; z-index: 2; top: 50%; left: 50%;
-      transform: translate(-50%, -50%); text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      color: #f5c518;
-      animation: glow 3s ease-in-out infinite;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    @keyframes glow {
-      0%, 100% { text-shadow: 0 0 5px #fff; }
-      50% { text-shadow: 0 0 20px #f5c518; }
-    }
-
-    .canvas-container {
-      width: 150px;
-      height: 150px;
-      margin: 40px auto;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      color: #f5c518;
-      margin-bottom: 20px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .product-grid div {
-      background: #222;
-      padding: 10px;
+    /* --- Rotating Steel Cube --- */
+    .rotating-cube {
+      margin: 60px auto;
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(145deg, #666, #333);
+      color: white;
+      font-size: 26px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 10px;
-      transition: transform 0.3s ease;
+      animation: rotate 6s infinite linear;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
     }
 
-    .product-grid div:hover {
-      transform: scale(1.05);
+    @keyframes rotate {
+      from { transform: rotateY(0deg) rotateX(0deg); }
+      to   { transform: rotateY(360deg) rotateX(360deg); }
     }
 
-    .product-grid img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 5px;
-    }
-
-    .whatsapp {
+    /* WhatsApp Buttons */
+    .whatsapp-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 20;
+      z-index: 1000;
     }
 
-    .whatsapp a img {
-      width: 50px;
-      height: 50px;
+    .whatsapp-button a {
+      display: block;
+      margin: 6px;
     }
 
-    footer {
-      background: #000;
+    .whatsapp-button img {
+      width: 45px;
+      height: 45px;
+    }
+
+    /* Centered Sections */
+    section {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-
-    footer div { display: none; }
-
-    @media(max-width:768px){
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1rem; }
+      padding: 40px 20px;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="slider">
-      <img src="https://images.unsplash.com/photo-1618826411644-e2f3a8efb5a7?auto=format&fit=crop&w=1950&q=80" alt="Steel Works">
-      <img src="https://images.unsplash.com/photo-1609840114624-cbb897bd3bd0?auto=format&fit=crop&w=1950&q=80" alt="Industrial Steel">
-      <img src="https://images.unsplash.com/photo-1581094271921-990bdc6cdd53?auto=format&fit=crop&w=1950&q=80" alt="Metal Processing">
-      <img src="https://images.unsplash.com/photo-1586864387788-5ef042ec7c35?auto=format&fit=crop&w=1950&q=80" alt="Iron Scrap Yard">
-    </div>
-    <div class="overlay"></div>
-    <div class="hero">
-      <h1>Gera Enterprise</h1>
-      <p>Ferrous & Non‑Ferrous Iron and Steel Trading</p>
-      <p>Established Since 1979</p>
-      <div class="canvas-container">
-        <canvas id="geCube" width="150" height="150"></canvas>
-      </div>
-    </div>
-  </header>
 
-  <section id="products">
-    <h2>We Deal In</h2>
-    <div class="product-grid">
-      <div><img src="https://images.unsplash.com/photo-1609859848814-276a5c68a88f?auto=format&fit=crop&w=800&q=80"><p>HMS Scrap</p></div>
-      <div><img src="="https://images.unsplash.com/photo-1627030037765-abbfdf40e2d1?auto=format&fit=crop&w=800&q=80"><p>MS Plates</p></div>
-      <div><img src="https://images.unsplash.com/photo-1587574293340-592bbaefed49?auto=format&fit=crop&w=800&q=80"><p>Cast Iron</p></div>
-      <div><img src="https://images.unsplash.com/photo-1610910749484-4a1d4e3aeb62?auto=format&fit=crop&w=800&q=80"><p>Copper Scrap</p></div>
-      <div><img src="https://images.unsplash.com/photo-1619855803330-0f4e058fc2e3?auto=format&fit=crop&w=800&q=80"><p>Brass Scrap</p></div>
-      <div><img src="https://images.unsplash.com/photo-1586339949252-19d6c1cfb8b2?auto=format&fit=crop&w=800&q=80"><p>Aluminium Scrap</p></div>
+  <!-- Hidden Legal Credit -->
+  <!-- Website template based on Solid State by HTML5 UP | html5up.net | Licensed under CC BY 3.0 -->
+
+  <!-- Cube Animation -->
+  <div class="rotating-cube">GE</div>
+
+  <!-- Image Slider -->
+  <section class="image-slider">
+    <div class="slides">
+      <img src="images/hms1.jpg" alt="HMS Scrap 1" />
+      <img src="images/hms2.jpg" alt="HMS Scrap 2" />
+      <img src="images/copper.jpg" alt="Copper Scrap" />
+      <img src="images/brass.jpg" alt="Brass Scrap" />
+      <img src="images/castiron.jpg" alt="Cast Iron Scrap" />
+      <img src="images/aluminium.jpg" alt="Aluminium Scrap" />
+      <img src="images/msplates.jpg" alt="MS Plates" />
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Gera Enterprise is a trusted iron and steel trading company, dealing in ferrous and non-ferrous scrap across India and internationally. With a legacy since 1979, we are known for reliability, transparency, and timely delivery in the industrial metal sector.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>📞 +91 9814452000</p>
-    <p>📞 +91 9779705252</p>
+  <!-- Company Details -->
+  <section>
+    <h1>Gera Enterprise</h1>
+    <p>Ferrous and Non-Ferrous Iron and Steel Trading</p>
+    <p><strong>Established Since 1979</strong></p>
+    <p>📞 ‪+91 9814452000‬ | 📞 ‪+91 9779705252‬</p>
     <p>📧 geraenterprises79@gmail.com</p>
   </section>
 
-  <div class="whatsapp">
-    <a href="https://wa.me/919814452000" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 1" /></a>
-    <a href="https://wa.me/919779705252" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 2" /></a>
+  <!-- We Deal In Section -->
+  <section>
+    <h2>We Deal In</h2>
+    <ul style="list-style: none; padding: 0; font-size: 18px;">
+      <li>HMS Scrap</li>
+      <li>Copper Scrap</li>
+      <li>Brass Scrap</li>
+      <li>Cast Iron Scrap</li>
+      <li>Aluminium Scrap</li>
+      <li>MS Plates</li>
+    </ul>
+  </section>
+
+  <!-- About Us -->
+  <section>
+    <h2>About Us</h2>
+    <p>Gera Enterprise is a trusted trading company specializing in ferrous and non-ferrous iron and steel scrap. With decades of industry experience, we serve clients across India and internationally, committed to quality, reliability, and long-term business relationships.</p>
+  </section>
+
+  <!-- Contact Us -->
+  <section>
+    <h2>Contact Us</h2>
+    <p>📞 ‪+91 9814452000‬ | 📞 ‪+91 9779705252‬</p>
+    <p>📧 geraenterprises79@gmail.com</p>
+  </section>
+
+  <!-- WhatsApp Chat Buttons -->
+  <div class="whatsapp-button">
+    <a href="https://wa.me/919814452000" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 1">
+    </a>
+    <a href="https://wa.me/919779705252" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 2">
+    </a>
   </div>
 
-  <footer>
-    <div>
-      Template by <a href="https://html5up.net" target="_blank">HTML5 UP</a> | Based on Solid State
-    </div>
-    © Gera Enterprise 2025
-  </footer>
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
 
-  <!-- GE Cube JavaScript -->
-  <script>
-    const canvas = document.getElementById("geCube");
-    const ctx = canvas.getContext("2d");
-    let angle = 0;
-
-    function drawCube() {
-      const size = 50;
-      const center = { x: canvas.width / 2, y: canvas.height / 2 };
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.save();
-      ctx.translate(center.x, center.y);
-      ctx.rotate(angle);
-      ctx.fillStyle = "#ccc";
-      ctx.strokeStyle = "#888";
-      ctx.lineWidth = 2;
-
-      ctx.beginPath();
-      ctx.rect(-size / 2, -size / 2, size, size);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = "#111";
-      ctx.font = "bold 16px sans-serif";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText("GE", 0, 0);
-
-      ctx.restore();
-    }
-
-    function animate() {
-      angle += 0.01;
-      drawCube();
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-
-    let isDragging = false;
-    let lastX = 0;
-    canvas.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      lastX = e.clientX;
-    });
-
-    canvas.addEventListener("mousemove", (e) => {
-      if (isDragging) {
-        const dx = e.clientX - lastX;
-        angle += dx * 0.01;
-        lastX = e.clientX;
-      }
-    });
-
-    canvas.addEventListener("mouseup", () => {
-      isDragging = false;
-    });
-
-    canvas.addEventListener("touchstart", (e) => {
-      isDragging = true;
-      lastX = e.touches[0].clientX;
-    });
-
-    canvas.addEventListener("touchmove", (e) => {
-      if (isDragging) {
-        const dx = e.touches[0].clientX - lastX;
-        angle += dx * 0.01;
-        lastX = e.touches[0].clientX;
-      }
-    });
-
-    canvas.addEventListener("touchend", () => {
-      isDragging = false;
-    });
-  </script>
 </body>
 </html>
