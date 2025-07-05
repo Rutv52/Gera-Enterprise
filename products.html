@@ -151,25 +151,26 @@
     </div>
   </div>
 
-  <!-- Three.js Script (CDN) -->
+  <!-- Three.js Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
 
-  <!-- 3D Rod Animation -->
+  <!-- 3D Rod Animation Script -->
   <script>
     const canvas = document.getElementById("steelCanvas");
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-    // Lighting
+    const bounds = canvas.getBoundingClientRect();
+    const camera = new THREE.PerspectiveCamera(75, bounds.width / bounds.height, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(bounds.width, bounds.height);
+    camera.updateProjectionMatrix();
+
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
     scene.add(ambientLight);
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 2);
     scene.add(directionalLight);
 
-    // Steel/TMT Rod Geometry
     const geometry = new THREE.CylinderGeometry(0.3, 0.3, 2.5, 64);
     const material = new THREE.MeshStandardMaterial({
       color: 0x999999,
@@ -179,10 +180,8 @@
     const rod = new THREE.Mesh(geometry, material);
     scene.add(rod);
 
-    // Position camera
     camera.position.z = 5;
 
-    // Rotation logic
     let mouseX = 0, mouseY = 0;
     function animate() {
       requestAnimationFrame(animate);
@@ -192,23 +191,19 @@
     }
     animate();
 
-    // Mouse movement
     canvas.addEventListener("mousemove", (event) => {
-      const bounds = canvas.getBoundingClientRect();
-      const x = event.clientX - bounds.left;
-      const y = event.clientY - bounds.top;
-      mouseX = ((x / canvas.clientWidth) - 0.5) * 2;
-      mouseY = ((y / canvas.clientHeight) - 0.5) * 2;
+      const x = event.offsetX;
+      const y = event.offsetY;
+      mouseX = ((x / canvas.width) - 0.5) * 2;
+      mouseY = ((y / canvas.height) - 0.5) * 2;
     });
 
-    // Touch movement
     canvas.addEventListener("touchmove", (event) => {
       const touch = event.touches[0];
-      const bounds = canvas.getBoundingClientRect();
-      const x = touch.clientX - bounds.left;
-      const y = touch.clientY - bounds.top;
-      mouseX = ((x / canvas.clientWidth) - 0.5) * 2;
-      mouseY = ((y / canvas.clientHeight) - 0.5) * 2;
+      const x = touch.clientX - canvas.getBoundingClientRect().left;
+      const y = touch.clientY - canvas.getBoundingClientRect().top;
+      mouseX = ((x / canvas.width) - 0.5) * 2;
+      mouseY = ((y / canvas.height) - 0.5) * 2;
     });
   </script>
 </body>
