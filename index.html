@@ -8,29 +8,29 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: #fff;
       background: url('images/background.jpg') no-repeat center center fixed;
       background-size: cover;
+      color: #fff;
       overflow-x: hidden;
       position: relative;
     }
 
-    .overlay-bg {
+    .overlay {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.6);
       z-index: 0;
     }
 
     nav {
-      background: rgba(0, 0, 0, 0.75);
-      padding: 1rem 2rem;
+      position: relative;
+      background: rgba(0, 0, 0, 0.7);
       display: flex;
       justify-content: center;
+      padding: 1rem 2rem;
       gap: 2rem;
-      z-index: 10;
-      position: relative;
+      z-index: 1;
     }
 
     nav a {
@@ -43,66 +43,63 @@
       color: #fff;
     }
 
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
     #rodCanvas {
       position: absolute;
       top: 20px;
       right: 20px;
       width: 120px;
       height: 120px;
-      z-index: 5;
-    }
-
-    .content {
-      text-align: center;
-      padding: 5rem 2rem;
-      position: relative;
       z-index: 2;
-    }
-
-    .content h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .content p {
-      font-size: 1.2rem;
-      color: #ccc;
     }
 
     .section {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 2rem;
       background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
       border-radius: 8px;
+      z-index: 1;
       position: relative;
-      z-index: 2;
     }
 
     .section h2 {
       text-align: center;
       margin-bottom: 1rem;
-      font-size: 1.8rem;
     }
 
     .section p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ddd;
       text-align: center;
+      color: #ddd;
     }
 
     .contacts {
       text-align: center;
-      margin: 3rem 0;
-      z-index: 2;
+      margin-top: 3rem;
+      z-index: 1;
       position: relative;
     }
 
     .contacts a {
       color: #fff;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 0.5rem;
       text-decoration: none;
     }
 
@@ -110,49 +107,49 @@
       text-align: center;
       font-size: 0.8rem;
       color: #666;
-      margin-bottom: 1rem;
+      margin: 2rem 0;
+      z-index: 1;
+      position: relative;
     }
   </style>
 </head>
 <body>
 
-  <!-- Dark overlay for readability -->
-  <div class="overlay-bg"></div>
+  <div class="overlay"></div>
 
-  <!-- 3D Rod Canvas -->
+  <!-- 3D Rod -->
   <canvas id="rodCanvas"></canvas>
 
-  <!-- Navigation -->
+  <!-- Navbar -->
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
     <a href="about.html">About</a>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="content">
+  <!-- Hero -->
+  <div class="hero">
     <h1>Gera Enterprise</h1>
     <p>Ferrous & Non-Ferrous Scrap Trading Since 1979</p>
   </div>
 
-  <!-- About Section -->
+  <!-- About -->
   <div class="section">
     <h2>About Us</h2>
     <p>
-      Gera Enterprise is a trusted name in the iron and steel trading industry,
-      specializing in both ferrous and non-ferrous scrap materials. With operations
-      across India and international markets, we deliver quality and consistency
-      backed by decades of expertise.
+      Gera Enterprise is a trusted trading company dealing in ferrous and non-ferrous iron and steel scrap.
+      Operating across India and internationally, we bring over 40 years of experience and trust.
     </p>
   </div>
 
-  <!-- Why Choose Us Section -->
+  <!-- Why Choose Us -->
   <div class="section">
     <h2>Why Choose Us</h2>
     <p>
-      ✔ Over 40 years of industry experience<br />
-      ✔ Trusted by manufacturers and suppliers nationwide<br />
-      ✔ Timely delivery and transparent trading practices
+      ✔ Over 40 years of legacy<br />
+      ✔ Transparent trading<br />
+      ✔ Premium industrial connections across India<br />
+      ✔ Global exports and fast service
     </p>
   </div>
 
@@ -165,7 +162,7 @@
   </div>
 
   <footer>
-    <div style="display:none;">Credits: Solid State by HTML5 UP</div>
+    <div style="display: none;">Credits: HTML5 UP & Solid State (hidden as per license)</div>
   </footer>
 
   <!-- 3D Rod Script -->
@@ -175,16 +172,16 @@
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setSize(120, 120);
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     camera.position.z = 5;
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
     const light = new THREE.DirectionalLight(0xffffff, 1);
     light.position.set(2, 2, 2);
     scene.add(light);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
 
     const rod = new THREE.Mesh(
-      new THREE.CylinderGeometry(0.2, 0.2, 2, 64),
+      new THREE.CylinderGeometry(0.2, 0.2, 2.2, 64),
       new THREE.MeshStandardMaterial({ color: 0x999999, metalness: 1, roughness: 0.3 })
     );
     rod.rotation.z = Math.PI / 2;
@@ -206,7 +203,8 @@
     });
 
     canvas.addEventListener("touchmove", e => {
-      const t = e.touches[0], r = canvas.getBoundingClientRect();
+      const t = e.touches[0];
+      const r = canvas.getBoundingClientRect();
       mx = ((t.clientX - r.left) / r.width - 0.5) * 2;
       my = ((t.clientY - r.top) / r.height - 0.5) * 2;
     });
