@@ -42,21 +42,21 @@
       margin-bottom: 2rem;
     }
 
-    .row {
-      display: flex;
-      justify-content: center;
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
+      justify-items: center;
     }
 
     .product {
-      flex: 0 0 45%;
       background: #1f1f1f;
       padding: 1rem;
       border-radius: 6px;
       text-align: center;
       transition: transform 0.2s ease;
+      width: 100%;
+      max-width: 400px;
     }
 
     .product:hover {
@@ -86,8 +86,6 @@
       font-size: 0.85rem;
       color: #666;
     }
-
-
   </style>
 </head>
 <body>
@@ -102,7 +100,7 @@
   <div class="section">
     <h2>Our Products</h2>
 
-    <div class="row">
+    <div class="products">
       <div class="product">
         <img src="images/tmt-cutting.jpg" alt="TMT Cutting">
         <h3>TMT Cutting</h3>
@@ -113,9 +111,6 @@
         <h3>HMS Scrap</h3>
         <p>Heavy melting steel scrap from industrial sources.</p>
       </div>
-    </div>
-
-    <div class="row">
       <div class="product">
         <img src="images/cast-iron.jpg" alt="Cast Iron">
         <h3>Cast Iron</h3>
@@ -126,9 +121,6 @@
         <h3>Copper</h3>
         <p>Clean copper scrap ideal for melting and reuse.</p>
       </div>
-    </div>
-
-    <div class="row">
       <div class="product">
         <img src="images/brass.jpg" alt="Brass">
         <h3>Brass</h3>
@@ -139,9 +131,6 @@
         <h3>MS Plates</h3>
         <p>Mild steel plate scrap, ideal for reprocessing.</p>
       </div>
-    </div>
-
-    <div class="row">
       <div class="product">
         <img src="images/gas-cut.jpg" alt="Gas Cut Scrap">
         <h3>Gas Cut Scrap</h3>
@@ -152,16 +141,12 @@
         <h3>TMT Rolling</h3>
         <p>Fresh TMT mill scrap collected during rolling processes.</p>
       </div>
-    </div>
-
-    <div class="row">
       <div class="product">
         <img src="images/ms-rolling.jpg" alt="MS Rolling">
         <h3>MS Rolling</h3>
         <p>Mild steel rolling scrap from rebar and angle production.</p>
       </div>
     </div>
-
   </div>
 
   <footer>
