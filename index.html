@@ -1,24 +1,29 @@
-<!-- Top of index.html -->
 <!DOCTYPE html>
+<!--
+Template adapted from Solid State by HTML5 UP | html5up.net | @ajlkn
+-->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gera Enterprises - Ferrous & Non-Ferrous Scrap</title>
+  <title>Gera Enterprises - Ferrous & Non-Ferrous Scrap Traders</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
-      background: url('images/background.jpg') no-repeat center center/cover;
       overflow-x: hidden;
     }
     nav {
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0,0,0,0.8);
       padding: 1rem 2rem;
       display: flex;
       justify-content: center;
       gap: 2rem;
+      z-index: 10;
+      position: relative;
     }
     nav a {
       color: #ccc;
@@ -28,42 +33,58 @@
     nav a:hover {
       color: #fff;
     }
-    header {
-      padding: 4rem 2rem;
+
+    .hero {
       text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: rgba(0,0,0,0.4);
     }
-    header h1 {
+    .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #f0f0f0;
+      margin-bottom: 0.5rem;
     }
-    header p {
+    .hero p {
       font-size: 1.2rem;
-      color: #ccc;
+      margin-bottom: 1rem;
     }
-    .info {
+
+    .about, .contact {
+      max-width: 1100px;
+      margin: auto;
+      padding: 4rem 2rem;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
       text-align: center;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
       margin-top: 2rem;
     }
-    .info p {
-      font-size: 1.1rem;
-      color: #ddd;
+
+    .whatsapp-buttons {
+      text-align: center;
+      margin-top: 1.5rem;
     }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      padding: 10px 14px;
-      border-radius: 50%;
-      font-size: 22px;
-      text-decoration: none;
+    .whatsapp-buttons a {
+      margin: 0 0.5rem;
+      display: inline-block;
     }
-    canvas#steelCanvas {
+    .whatsapp-buttons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Small 3D rod container */
+    #steelCanvas {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: 20px;
+      right: 20px;
       width: 150px;
       height: 150px;
       z-index: 5;
@@ -72,27 +93,46 @@
 </head>
 <body>
 
+<!-- 3D Rod Canvas -->
 <canvas id="steelCanvas"></canvas>
 
+<!-- Navigation -->
 <nav>
   <a href="index.html">Home</a>
   <a href="products.html">Products</a>
   <a href="about.html">About</a>
 </nav>
 
-<header>
+<!-- Hero Section -->
+<section class="hero">
   <h1>Gera Enterprises</h1>
-  <p>Ferrous and Non-Ferrous Iron & Steel Trading</p>
+  <p>Ferrous and Non-Ferrous Iron & Steel Scrap Traders</p>
   <p>Established Since 46 Years</p>
-</header>
+</section>
 
-<div class="info">
-  <p>📞 +91 9814452000 | +91 9779705252</p>
-  <p>✉ geraenterprises79@gmail.com</p>
-</div>
+<!-- About Us -->
+<section class="about">
+  <h2 class="section-title">About Us</h2>
+  <p>
+    Gera Enterprises is a leading iron and steel trading company with over 46 years of experience in both domestic and international markets. We specialize in the trading of ferrous and non-ferrous scrap, catering to a wide range of industries across India. With strong sourcing networks and a reputation for quality, Gera Enterprises continues to be a trusted name in the scrap trading business.
+  </p>
+</section>
 
-<a class="whatsapp" href="https://wa.me/919814452000" target="_blank">💬</a>
+<!-- Contact Info -->
+<section class="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <div class="contact-info">
+    <p>📞 +91 9814452000</p>
+    <p>📞 +91 9779705252</p>
+    <p>📧 geraenterprises79@gmail.com</p>
+  </div>
+  <div class="whatsapp-buttons">
+    <a href="https://wa.me/919814452000" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp 1" /></a>
+    <a href="https://wa.me/919779705252" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp 2" /></a>
+  </div>
+</section>
 
+<!-- Three.js Script -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
 <script>
   const canvas = document.getElementById("steelCanvas");
@@ -101,20 +141,21 @@
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
   renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
   scene.add(ambientLight);
   const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(1, 1, 2);
+  directionalLight.position.set(2, 2, 3);
   scene.add(directionalLight);
 
   const geometry = new THREE.CylinderGeometry(0.3, 0.3, 2.5, 64);
   const material = new THREE.MeshStandardMaterial({
-    color: 0x999999,
+    color: 0xb0b0b0,
     metalness: 1,
-    roughness: 0.3
+    roughness: 0.2
   });
   const rod = new THREE.Mesh(geometry, material);
   scene.add(rod);
+
   camera.position.z = 5;
 
   let mouseX = 0, mouseY = 0;
@@ -128,10 +169,14 @@
 
   canvas.addEventListener("mousemove", (e) => {
     const bounds = canvas.getBoundingClientRect();
-    const x = e.clientX - bounds.left;
-    const y = e.clientY - bounds.top;
-    mouseX = ((x / canvas.clientWidth) - 0.5) * 2;
-    mouseY = ((y / canvas.clientHeight) - 0.5) * 2;
+    mouseX = ((e.clientX - bounds.left) / canvas.clientWidth - 0.5) * 2;
+    mouseY = ((e.clientY - bounds.top) / canvas.clientHeight - 0.5) * 2;
+  });
+  canvas.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+    const bounds = canvas.getBoundingClientRect();
+    mouseX = ((touch.clientX - bounds.left) / canvas.clientWidth - 0.5) * 2;
+    mouseY = ((touch.clientY - bounds.top) / canvas.clientHeight - 0.5) * 2;
   });
 </script>
 
