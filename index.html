@@ -1,214 +1,139 @@
+<!-- Top of index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gera Enterprise</title>
+  <title>Gera Enterprises - Ferrous & Non-Ferrous Scrap</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
       color: #fff;
+      background: url('images/background.jpg') no-repeat center center/cover;
       overflow-x: hidden;
-      position: relative;
     }
-
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
-    }
-
     nav {
-      position: relative;
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
       display: flex;
       justify-content: center;
-      padding: 1rem 2rem;
       gap: 2rem;
-      z-index: 1;
     }
-
     nav a {
       color: #ccc;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav a:hover {
       color: #fff;
     }
-
-    .hero {
+    header {
+      padding: 4rem 2rem;
       text-align: center;
-      padding: 6rem 2rem;
-      position: relative;
-      z-index: 1;
     }
-
-    .hero h1 {
-      font-size: 3rem;
+    header h1 {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #f0f0f0;
     }
-
-    .hero p {
+    header p {
       font-size: 1.2rem;
       color: #ccc;
     }
-
-    #rodCanvas {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 120px;
-      height: 120px;
-      z-index: 2;
-    }
-
-    .section {
-      background: rgba(0, 0, 0, 0.5);
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 1000px;
-      border-radius: 8px;
-      z-index: 1;
-      position: relative;
-    }
-
-    .section h2 {
+    .info {
       text-align: center;
-      margin-bottom: 1rem;
+      margin-top: 2rem;
     }
-
-    .section p {
-      text-align: center;
+    .info p {
+      font-size: 1.1rem;
       color: #ddd;
     }
-
-    .contacts {
-      text-align: center;
-      margin-top: 3rem;
-      z-index: 1;
-      position: relative;
-    }
-
-    .contacts a {
-      color: #fff;
-      display: block;
-      margin-bottom: 0.5rem;
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 22px;
       text-decoration: none;
     }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #666;
-      margin: 2rem 0;
-      z-index: 1;
-      position: relative;
+    canvas#steelCanvas {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 150px;
+      height: 150px;
+      z-index: 5;
     }
   </style>
 </head>
 <body>
 
-  <div class="overlay"></div>
+<canvas id="steelCanvas"></canvas>
 
-  <!-- 3D Rod -->
-  <canvas id="rodCanvas"></canvas>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="about.html">About</a>
+</nav>
 
-  <!-- Navbar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-  </nav>
+<header>
+  <h1>Gera Enterprises</h1>
+  <p>Ferrous and Non-Ferrous Iron & Steel Trading</p>
+  <p>Established Since 46 Years</p>
+</header>
 
-  <!-- Hero -->
-  <div class="hero">
-    <h1>Gera Enterprise</h1>
-    <p>Ferrous & Non-Ferrous Scrap Trading Since 1979</p>
-  </div>
+<div class="info">
+  <p>📞 +91 9814452000 | +91 9779705252</p>
+  <p>✉ geraenterprises79@gmail.com</p>
+</div>
 
-  <!-- About -->
-  <div class="section">
-    <h2>About Us</h2>
-    <p>
-      Gera Enterprise is a trusted trading company dealing in ferrous and non-ferrous iron and steel scrap.
-      Operating across India and internationally, we bring over 40 years of experience and trust.
-    </p>
-  </div>
+<a class="whatsapp" href="https://wa.me/919814452000" target="_blank">💬</a>
 
-  <!-- Why Choose Us -->
-  <div class="section">
-    <h2>Why Choose Us</h2>
-    <p>
-      ✔ Over 40 years of legacy<br />
-      ✔ Transparent trading<br />
-      ✔ Premium industrial connections across India<br />
-      ✔ Global exports and fast service
-    </p>
-  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+<script>
+  const canvas = document.getElementById("steelCanvas");
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-  <!-- Contact Info -->
-  <div class="contacts">
-    <a href="tel:+919814452000">📞 +91 98144 52000</a>
-    <a href="tel:+919779705252">📞 +91 97797 05252</a>
-    <a href="mailto:geraenterprises79@gmail.com">✉ geraenterprises79@gmail.com</a>
-    <a href="https://wa.me/919814452000" target="_blank">💬 WhatsApp Us</a>
-  </div>
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
+  scene.add(ambientLight);
+  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+  directionalLight.position.set(1, 1, 2);
+  scene.add(directionalLight);
 
-  <footer>
-    <div style="display: none;">Credits: HTML5 UP & Solid State (hidden as per license)</div>
-  </footer>
+  const geometry = new THREE.CylinderGeometry(0.3, 0.3, 2.5, 64);
+  const material = new THREE.MeshStandardMaterial({
+    color: 0x999999,
+    metalness: 1,
+    roughness: 0.3
+  });
+  const rod = new THREE.Mesh(geometry, material);
+  scene.add(rod);
+  camera.position.z = 5;
 
-  <!-- 3D Rod Script -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-  <script>
-    const canvas = document.getElementById("rodCanvas");
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-    camera.position.z = 5;
+  let mouseX = 0, mouseY = 0;
+  function animate() {
+    requestAnimationFrame(animate);
+    rod.rotation.x += (mouseY - rod.rotation.x) * 0.05;
+    rod.rotation.y += (mouseX - rod.rotation.y) * 0.05;
+    renderer.render(scene, camera);
+  }
+  animate();
 
-    const light = new THREE.DirectionalLight(0xffffff, 1);
-    light.position.set(2, 2, 2);
-    scene.add(light);
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-
-    const rod = new THREE.Mesh(
-      new THREE.CylinderGeometry(0.2, 0.2, 2.2, 64),
-      new THREE.MeshStandardMaterial({ color: 0x999999, metalness: 1, roughness: 0.3 })
-    );
-    rod.rotation.z = Math.PI / 2;
-    scene.add(rod);
-
-    let mx = 0, my = 0;
-    function animate() {
-      requestAnimationFrame(animate);
-      rod.rotation.x += (my - rod.rotation.x) * 0.05;
-      rod.rotation.y += (mx - rod.rotation.y) * 0.05;
-      renderer.render(scene, camera);
-    }
-    animate();
-
-    canvas.addEventListener("mousemove", e => {
-      const r = canvas.getBoundingClientRect();
-      mx = ((e.clientX - r.left) / r.width - 0.5) * 2;
-      my = ((e.clientY - r.top) / r.height - 0.5) * 2;
-    });
-
-    canvas.addEventListener("touchmove", e => {
-      const t = e.touches[0];
-      const r = canvas.getBoundingClientRect();
-      mx = ((t.clientX - r.left) / r.width - 0.5) * 2;
-      my = ((t.clientY - r.top) / r.height - 0.5) * 2;
-    });
-  </script>
+  canvas.addEventListener("mousemove", (e) => {
+    const bounds = canvas.getBoundingClientRect();
+    const x = e.clientX - bounds.left;
+    const y = e.clientY - bounds.top;
+    mouseX = ((x / canvas.clientWidth) - 0.5) * 2;
+    mouseY = ((y / canvas.clientHeight) - 0.5) * 2;
+  });
+</script>
 
 </body>
 </html>
