@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Products - Gera Enterprise</title>
+  <title>Our Products - Gera Enterprises</title>
   <style>
     body {
       margin: 0;
       background: #0e0e0e;
       font-family: 'Segoe UI', sans-serif;
       color: #fff;
-      overflow-x: hidden;
     }
-
     nav {
       background: #1a1a1a;
       padding: 1rem 2rem;
@@ -20,71 +18,50 @@
       justify-content: center;
       gap: 2rem;
     }
-
     nav a {
       color: #ccc;
       text-decoration: none;
       font-weight: 500;
     }
-
     nav a:hover {
       color: #fff;
     }
-
     .section {
       padding: 2rem;
       max-width: 1100px;
       margin: auto;
     }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
     .products {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      justify-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 2rem;
     }
-
     .product {
+      width: 48%;
       background: #1f1f1f;
       padding: 1rem;
       border-radius: 6px;
       text-align: center;
-      transition: transform 0.2s ease;
-      width: 100%;
-      max-width: 400px;
     }
-
-    .product:hover {
-      transform: scale(1.05);
-    }
-
     .product img {
       width: 100%;
-      height: 160px;
+      height: 180px;
       object-fit: cover;
       border-radius: 6px;
     }
-
     .product h3 {
       margin-top: 1rem;
       font-size: 1.1rem;
     }
-
     .product p {
       font-size: 0.9rem;
       color: #aaa;
     }
-
-    footer {
-      text-align: center;
-      margin: 2rem 0;
-      font-size: 0.85rem;
-      color: #666;
+    @media (max-width: 600px) {
+      .product {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -99,7 +76,6 @@
 
   <div class="section">
     <h2>Our Products</h2>
-
     <div class="products">
       <div class="product">
         <img src="images/tmt-cutting.jpg" alt="TMT Cutting">
@@ -122,11 +98,6 @@
         <p>Clean copper scrap ideal for melting and reuse.</p>
       </div>
       <div class="product">
-        <img src="images/brass.jpg" alt="Brass">
-        <h3>Brass</h3>
-        <p>Bright brass scrap from plumbing and components.</p>
-      </div>
-      <div class="product">
         <img src="images/ms-plates.jpg" alt="MS Plates">
         <h3>MS Plates</h3>
         <p>Mild steel plate scrap, ideal for reprocessing.</p>
@@ -134,24 +105,30 @@
       <div class="product">
         <img src="images/gas-cut.jpg" alt="Gas Cut Scrap">
         <h3>Gas Cut Scrap</h3>
-        <p>Scrap from manual or machine gas-cutting processes.</p>
+        <p>Cut metal sections used in heavy industry melting.</p>
       </div>
       <div class="product">
         <img src="images/tmt-rolling.jpg" alt="TMT Rolling">
         <h3>TMT Rolling</h3>
-        <p>Fresh TMT mill scrap collected during rolling processes.</p>
+        <p>Fresh TMT rolling scrap used in structural works.</p>
       </div>
       <div class="product">
         <img src="images/ms-rolling.jpg" alt="MS Rolling">
         <h3>MS Rolling</h3>
-        <p>Mild steel rolling scrap from rebar and angle production.</p>
+        <p>Rolling scrap from mild steel, ideal for recycling.</p>
+      </div>
+      <div class="product">
+        <img src="images/motor-scrap.jpg" alt="Motor Scrap">
+        <h3>Motor Scrap</h3>
+        <p>Electrical motor components, useful for copper recovery.</p>
+      </div>
+      <div class="product">
+        <img src="images/alloy-steel.jpg" alt="Alloy Steel">
+        <h3>Alloy Steel</h3>
+        <p>Specialty steel scrap with high resistance and strength.</p>
       </div>
     </div>
   </div>
-
-  <footer>
-    © 2025 Gera Enterprise. All rights reserved.
-  </footer>
 
 </body>
 </html>
