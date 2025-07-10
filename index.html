@@ -1,184 +1,96 @@
 <!DOCTYPE html>
-<!--
-Template adapted from Solid State by HTML5 UP | html5up.net | @ajlkn
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gera Enterprises - Ferrous & Non-Ferrous Scrap Traders</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gera Enterprises - Iron and Steel Trading</title>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      overflow-x: hidden;
-    }
-    nav {
-      background: rgba(0,0,0,0.8);
-      padding: 1rem 2rem;
+    .contact-icons {
+      margin-top: 20px;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      z-index: 10;
-      position: relative;
+      gap: 20px;
     }
-    nav a {
-      color: #ccc;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 6rem 2rem 4rem;
-      background: rgba(0,0,0,0.4);
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .about, .contact {
-      max-width: 1100px;
-      margin: auto;
-      padding: 4rem 2rem;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .contact-info {
-      text-align: center;
-      font-size: 1.1rem;
-      margin-top: 2rem;
-    }
-
-    .whatsapp-buttons {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .whatsapp-buttons a {
-      margin: 0 0.5rem;
-      display: inline-block;
-    }
-    .whatsapp-buttons img {
+    .contact-icons img {
       width: 40px;
       height: 40px;
     }
-
-    /* Small 3D rod container */
-    #steelCanvas {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 150px;
-      height: 150px;
-      z-index: 5;
-    }
   </style>
 </head>
-<body>
+<body class="is-preload">
 
-<!-- 3D Rod Canvas -->
-<canvas id="steelCanvas"></canvas>
+  <!-- Hidden credit -->
+  <!-- Website template © HTML5 UP | Design: Solid State -->
 
-<!-- Navigation -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="about.html">About</a>
-</nav>
+  <!-- Header -->
+  <header id="header">
+    <h1>Gera Enterprises</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <h1>Gera Enterprises</h1>
-  <p>Ferrous and Non-Ferrous Iron & Steel Scrap Traders</p>
-  <p>Established Since 46 Years</p>
-</section>
+  <!-- Hero -->
+  <section id="banner">
+    <div class="inner">
+      <h2>Gera Enterprises</h2>
+      <p>Ferrous and Non-Ferrous Iron & Steel Trading</p>
+      <p>Established Since 46 Years</p>
+      <p>📞 +91 9814452000 | +91 9779705252</p>
+      <p>✉ geraenterprises79@gmail.com</p>
+      <div class="contact-icons">
+        <a href="https://wa.me/919814452000" target="_blank">
+          <img src="images/whatsapp-icon.png" alt="WhatsApp 1" />
+        </a>
+        <a href="https://wa.me/919779705252" target="_blank">
+          <img src="images/whatsapp-icon.png" alt="WhatsApp 2" />
+        </a>
+      </div>
+    </div>
+  </section>
 
-<!-- About Us -->
-<section class="about">
-  <h2 class="section-title">About Us</h2>
-  <p>
-    Gera Enterprises is a leading iron and steel trading company with over 46 years of experience in both domestic and international markets. We specialize in the trading of ferrous and non-ferrous scrap, catering to a wide range of industries across India. With strong sourcing networks and a reputation for quality, Gera Enterprises continues to be a trusted name in the scrap trading business.
-  </p>
-</section>
+  <!-- Section 1 -->
+  <section id="section1" class="wrapper style1">
+    <div class="inner">
+      <h2>Premium Quality Scrap</h2>
+      <p>We deal in high-quality ferrous and non-ferrous materials including HMS, TMT, MS Plates, and more. Our stock meets industrial-grade requirements for domestic and international clients.</p>
+    </div>
+  </section>
 
-<!-- Contact Info -->
-<section class="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <div class="contact-info">
-    <p>📞 +91 9814452000</p>
-    <p>📞 +91 9779705252</p>
-    <p>📧 geraenterprises79@gmail.com</p>
-  </div>
-  <div class="whatsapp-buttons">
-    <a href="https://wa.me/919814452000" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp 1" /></a>
-    <a href="https://wa.me/919779705252" target="_blank"><img src="images/whatsapp-icon.png" alt="WhatsApp 2" /></a>
-  </div>
-</section>
+  <!-- Section 2 -->
+  <section id="section2" class="wrapper style2">
+    <div class="inner">
+      <h2>Global Sourcing Network</h2>
+      <p>Backed by decades of experience, Gera Enterprises has built a robust supply chain and logistics network across India and abroad to fulfill your iron and steel demands efficiently.</p>
+    </div>
+  </section>
 
-<!-- Three.js Script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
-<script>
-  const canvas = document.getElementById("steelCanvas");
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  <!-- Section 3 -->
+  <section id="section3" class="wrapper style3">
+    <div class="inner">
+      <h2>Trusted Partner Since 1979</h2>
+      <p>For over 46 years, we’ve been delivering trust and value through consistent quality and reliable supply to our partners in construction, manufacturing, and fabrication sectors.</p>
+    </div>
+  </section>
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-  scene.add(ambientLight);
-  const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-  directionalLight.position.set(2, 2, 3);
-  scene.add(directionalLight);
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="copyright">
+      <li>&copy; Gera Enterprises. All rights reserved.</li>
+    </ul>
+  </footer>
 
-  const geometry = new THREE.CylinderGeometry(0.3, 0.3, 2.5, 64);
-  const material = new THREE.MeshStandardMaterial({
-    color: 0xb0b0b0,
-    metalness: 1,
-    roughness: 0.2
-  });
-  const rod = new THREE.Mesh(geometry, material);
-  scene.add(rod);
-
-  camera.position.z = 5;
-
-  let mouseX = 0, mouseY = 0;
-  function animate() {
-    requestAnimationFrame(animate);
-    rod.rotation.x += (mouseY - rod.rotation.x) * 0.05;
-    rod.rotation.y += (mouseX - rod.rotation.y) * 0.05;
-    renderer.render(scene, camera);
-  }
-  animate();
-
-  canvas.addEventListener("mousemove", (e) => {
-    const bounds = canvas.getBoundingClientRect();
-    mouseX = ((e.clientX - bounds.left) / canvas.clientWidth - 0.5) * 2;
-    mouseY = ((e.clientY - bounds.top) / canvas.clientHeight - 0.5) * 2;
-  });
-  canvas.addEventListener("touchmove", (e) => {
-    const touch = e.touches[0];
-    const bounds = canvas.getBoundingClientRect();
-    mouseX = ((touch.clientX - bounds.left) / canvas.clientWidth - 0.5) * 2;
-    mouseY = ((touch.clientY - bounds.top) / canvas.clientHeight - 0.5) * 2;
-  });
-</script>
-
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
