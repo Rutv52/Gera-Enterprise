@@ -5,51 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Products - Gera Enterprises</title>
   <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    .product-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      padding: 60px;
-      background-color: #f9f9f9;
-    }
-
-    .product-card {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .product-card h3 {
-      margin-top: 15px;
-      font-size: 1.3em;
-    }
-
-    @media (max-width: 768px) {
-      .product-grid {
-        grid-template-columns: 1fr;
-        padding: 20px;
-      }
-    }
-  </style>
 </head>
-<body>
-
-  <!-- Header -->
+<body class="is-preload">
   <header id="header">
     <h1><a href="index.html">Gera Enterprises</a></h1>
     <nav>
@@ -61,47 +18,62 @@
     </nav>
   </header>
 
-  <!-- Products Section -->
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="images/hms-ship.jpg" alt="HMS Ship Scrap" />
-      <h3>HMS Ship Scrap</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/ms-plates.jpg" alt="MS Plates" />
-      <h3>MS Plates</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/tmt-cutting.jpg" alt="TMT Cutting" />
-      <h3>TMT Cutting</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/cast-iron.jpg" alt="Cast Iron" />
-      <h3>Cast Iron</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/copper.jpg" alt="Copper" />
-      <h3>Copper</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/aluminium.jpg" alt="Aluminium" />
-      <h3>Aluminium</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/motor-scrap.jpg" alt="Motor Scrap" />
-      <h3>Motor Scrap</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/alloy-steel.jpg" alt="Alloy Steel" />
-      <h3>Alloy Steel</h3>
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <header class="major">
+        <h2>Our Products</h2>
+      </header>
+
+      <div class="products-grid" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+        <!-- Product 1 -->
+        <div class="product-item" style="width: 45%;">
+          <img src="images/hms.jpg" alt="HMS Scrap" style="width: 100%;" />
+          <h3 style="text-align: center;">HMS Scrap</h3>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-item" style="width: 45%;">
+          <img src="images/ms-plates.jpg" alt="MS Plates" style="width: 100%;" />
+          <h3 style="text-align: center;">MS Plates</h3>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-item" style="width: 45%;">
+          <img src="images/tmt-cutting.jpg" alt="TMT Cutting" style="width: 100%;" />
+          <h3 style="text-align: center;">TMT Cutting</h3>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-item" style="width: 45%;">
+          <img src="images/cast-iron.jpg" alt="Cast Iron" style="width: 100%;" />
+          <h3 style="text-align: center;">Cast Iron</h3>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-item" style="width: 45%;">
+          <img src="images/motor-scrap.jpg" alt="Motor Scrap" style="width: 100%;" />
+          <h3 style="text-align: center;">Motor Scrap</h3>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-item" style="width: 45%;">
+          <img src="images/alloy-steel.jpg" alt="Alloy Steel" style="width: 100%;" />
+          <h3 style="text-align: center;">Alloy Steel</h3>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer id="footer">
-    <p>&copy; Gera Enterprises. All rights reserved.</p>
+    <div class="inner">
+      <ul class="contact">
+        <li><strong>Phone:</strong> +91 9814452000 | +91 9779705252</li>
+        <li><strong>Email:</strong> geraenterprises79@gmail.com</li>
+      </ul>
+    </div>
   </footer>
 
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
