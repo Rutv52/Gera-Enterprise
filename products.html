@@ -1,96 +1,119 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Our Products - Gera Enterprises</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products - Gera Enterprises</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+    .product-item {
+      width: 300px;
+      text-align: center;
+      background: #333;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+    .product-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .product-item h3 {
+      margin-top: 15px;
+      color: #eee;
+      font-weight: 500;
+      font-size: 1.2em;
+    }
+    header nav a {
+      color: #fff !important;
+    }
+  </style>
 </head>
 <body class="is-preload">
-	<section id="banner">
-		<div class="inner">
-			<h1>Our Products</h1>
-			<p>High-quality Ferrous and Non-Ferrous Scrap Materials</p>
-		</div>
-	</section>
 
-	<!-- Product Grid Section -->
-	<section id="products" class="wrapper">
-		<div class="inner">
-			<div class="grid-container">
+  <!-- Header -->
+  <header id="header">
+    <h1><a href="index.html">Gera Enterprises</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-				<div class="product">
-					<img src="images/hms-scrap.jpg" alt="HMS Scrap">
-					<h3>HMS Scrap</h3>
-				</div>
+  <!-- Main -->
+  <section id="main">
+    <header class="major">
+      <h2>Our Products</h2>
+    </header>
 
-				<div class="product">
-					<img src="images/ms-plates.jpg" alt="MS Plates">
-					<h3>MS Plates</h3>
-				</div>
+    <div class="product-grid">
+      <div class="product-item">
+        <img src="images/hms-scrap.jpg" alt="HMS Scrap" />
+        <h3>HMS Scrap</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/ms-plates.jpg" alt="MS Plates" />
+        <h3>MS Plates</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/tmt-cutting.jpg" alt="TMT Cutting" />
+        <h3>TMT Cutting</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/cast-iron.jpg" alt="Cast Iron" />
+        <h3>Cast Iron</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/motor-scrap.jpg" alt="Motor Scrap" />
+        <h3>Motor Scrap</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/alloy-steel.jpg" alt="Alloy Steel" />
+        <h3>Alloy Steel</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/tmt-rolling.jpg" alt="TMT Rolling" />
+        <h3>TMT Rolling</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/ms-rolling.jpg" alt="MS Rolling" />
+        <h3>MS Rolling</h3>
+      </div>
+      <div class="product-item">
+        <img src="images/gas-cut.jpg" alt="Gas Cut Scrap" />
+        <h3>Gas Cut Scrap</h3>
+      </div>
+    </div>
+  </section>
 
-				<div class="product">
-					<img src="images/tmt-cutting.jpg" alt="TMT Cutting">
-					<h3>TMT Cutting</h3>
-				</div>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+      <ul class="contact">
+        <li><strong>Phone:</strong> +91 9814452000 | +91 9779705252</li>
+        <li><strong>Email:</strong> geraenterprises79@gmail.com</li>
+      </ul>
+    </div>
+  </footer>
 
-				<div class="product">
-					<img src="images/cast-iron.jpg" alt="Cast Iron">
-					<h3>Cast Iron</h3>
-				</div>
-
-				<div class="product">
-					<img src="images/motor-scrap.jpg" alt="Motor Scrap">
-					<h3>Motor Scrap</h3>
-				</div>
-
-				<div class="product">
-					<img src="images/alloy-steel.jpg" alt="Alloy Steel">
-					<h3>Alloy Steel</h3>
-				</div>
-
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="inner">
-			<ul class="contact">
-				<li><strong>Phone:</strong> +91 9814452000 | +91 9779705252</li>
-				<li><strong>Email:</strong> geraenterprises79@gmail.com</li>
-			</ul>
-		</div>
-	</footer>
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/main.js"></script>
-
-	<style>
-		.grid-container {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 40px;
-			justify-items: center;
-		}
-
-		.product {
-			text-align: center;
-			width: 90%;
-		}
-
-		.product img {
-			width: 100%;
-			height: auto;
-			border-radius: 8px;
-		}
-
-		.product h3 {
-			margin-top: 10px;
-			font-size: 1.2em;
-			color: white;
-		}
-	</style>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
