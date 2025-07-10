@@ -2,105 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gera Enterprises</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gera Enterprises - Iron & Steel Trading</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background: url('images/background.jpg') no-repeat center center fixed;
       background-size: cover;
+      color: #fff;
     }
-    .contact-footer {
-      margin-top: 50px;
+
+    header {
       text-align: center;
-      color: white;
+      padding: 5rem 1rem 2rem;
     }
-    .contact-footer img {
-      width: 30px;
-      height: 30px;
-      margin: 0 10px;
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 4px #000;
     }
-    .contact-footer a {
-      color: white;
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
       text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
     }
-    .contact-footer h2 {
-      margin-bottom: 10px;
+
+    nav a:hover {
+      text-decoration: underline;
     }
-    .contact-footer p {
-      margin: 5px 0;
+
+    .hero-rod {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 80px;
+      height: auto;
+      opacity: 0.9;
+      animation: floatRod 4s ease-in-out infinite;
+    }
+
+    @keyframes floatRod {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 2rem auto;
+      max-width: 1000px;
+      border-radius: 10px;
+    }
+
+    .footer-contact {
+      background-color: #111;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .footer-contact .whatsapp-icons {
+      margin-top: 1rem;
+    }
+
+    .footer-contact .whatsapp-icons img {
+      margin: 0 10px;
+      width: 40px;
+      height: 40px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-contact .whatsapp-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .hero-rod {
+        width: 60px;
+        top: 20px;
+        right: 20px;
+      }
     }
   </style>
 </head>
-<body class="is-preload">
+<body>
 
-  <!-- Page Wrapper -->
-  <div id="page-wrapper">
+  <img src="images/steel-rod.png" alt="3D Rod" class="hero-rod" />
 
-    <!-- Header -->
-    <header id="header" class="alt">
-      <h1><a href="index.html">Gera Enterprises</a></h1>
-      <nav id="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <h1>Gera Enterprises</h1>
+    <p>Ferrous and Non-Ferrous Iron & Steel Trading</p>
+    <p>Established Since 46 Years</p>
+  </header>
 
-    <!-- Banner -->
-    <section id="banner">
-      <div class="inner">
-        <h2>Gera Enterprises</h2>
-        <p>Ferrous and Non-Ferrous Iron & Steel Trading</p>
-        <p>Established Since 46 Years</p>
-      </div>
-    </section>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+  </nav>
 
-    <!-- Section: Premium Scrap Info -->
-    <section class="wrapper style1">
-      <div class="inner">
-        <h2>Premium Quality Scrap</h2>
-        <p>We deal in high-quality ferrous and non-ferrous materials including HMS, TMT, MS Plates, and more. Our stock meets industrial-grade requirements for domestic and international clients.</p>
-      </div>
-    </section>
-
-    <!-- Section: About -->
-    <section id="about" class="wrapper style2">
-      <div class="inner">
-        <h2>About Us</h2>
-        <p>Gera Enterprises is a leading iron and steel trading company with over 46 years of experience in both domestic and international markets. We specialize in the trading of ferrous and non-ferrous scrap, catering to a wide range of industries across India. With strong sourcing networks and a reputation for quality, Gera Enterprises continues to be a trusted name in the scrap trading business.</p>
-      </div>
-    </section>
-
-    <!-- Footer / Contact Info -->
-    <footer class="contact-footer">
-      <div class="inner">
-        <h2>Contact Us</h2>
-        <p>📞 +91 9814452000 | +91 9779705252</p>
-        <p>📧 <a href="mailto:geraenterprises79@gmail.com">geraenterprises79@gmail.com</a></p>
-        <div class="contact-icons">
-          <a href="https://wa.me/919814452000" target="_blank">
-            <img src="images/whatsapp-icon.png" alt="WhatsApp 1" />
-          </a>
-          <a href="https://wa.me/919779705252" target="_blank">
-            <img src="images/whatsapp-icon.png" alt="WhatsApp 2" />
-          </a>
-        </div>
-      </div>
-    </footer>
-
+  <!-- Section 1 -->
+  <div class="section">
+    <h2>Welcome to Gera Enterprises</h2>
+    <p>We are your trusted partner in iron and steel scrap trading. From HMS, MS Plates, TMT Cuttings to Copper and Aluminium—our legacy spans over four decades of excellence.</p>
   </div>
 
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <!-- Section 2 -->
+  <div class="section">
+    <h2>Our Strength</h2>
+    <p>Pan-India & international sourcing and trading network. Reliable quality. Long-term trust.</p>
+  </div>
 
-  <!-- 
-    Template: Solid State by HTML5 UP 
-    (html5up.net | @ajlkn) | Licensed under Creative Commons Attribution 3.0
-  -->
+  <!-- Section 3 -->
+  <div class="section">
+    <h2>Connect with Us</h2>
+    <p>Explore our Products and Contact us for the best industry deals and partnerships.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer-contact">
+    <p>Contact us:</p>
+    <p>📞 +91 9814452000 | 📞 +91 9779705252</p>
+    <p>✉ geraenterprises79@gmail.com</p>
+    <div class="whatsapp-icons">
+      <a href="https://wa.me/919814452000" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp 9814452000">
+      </a>
+      <a href="https://wa.me/919779705252" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp 9779705252">
+      </a>
+    </div>
+  </div>
+
 </body>
 </html>
