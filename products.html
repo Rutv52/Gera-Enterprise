@@ -1,79 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Products - Gera Enterprises</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+	<title>Our Products - Gera Enterprises</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
-  <header id="header">
-    <h1><a href="index.html">Gera Enterprises</a></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" class="active">Products</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-  </header>
+	<section id="banner">
+		<div class="inner">
+			<h1>Our Products</h1>
+			<p>High-quality Ferrous and Non-Ferrous Scrap Materials</p>
+		</div>
+	</section>
 
-  <section id="main" class="wrapper">
-    <div class="inner">
-      <header class="major">
-        <h2>Our Products</h2>
-      </header>
+	<!-- Product Grid Section -->
+	<section id="products" class="wrapper">
+		<div class="inner">
+			<div class="grid-container">
 
-      <div class="products-grid" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-        <!-- Product 1 -->
-        <div class="product-item" style="width: 45%;">
-          <img src="images/hms.jpg" alt="HMS Scrap" style="width: 100%;" />
-          <h3 style="text-align: center;">HMS Scrap</h3>
-        </div>
+				<div class="product">
+					<img src="images/hms-scrap.jpg" alt="HMS Scrap">
+					<h3>HMS Scrap</h3>
+				</div>
 
-        <!-- Product 2 -->
-        <div class="product-item" style="width: 45%;">
-          <img src="images/ms-plates.jpg" alt="MS Plates" style="width: 100%;" />
-          <h3 style="text-align: center;">MS Plates</h3>
-        </div>
+				<div class="product">
+					<img src="images/ms-plates.jpg" alt="MS Plates">
+					<h3>MS Plates</h3>
+				</div>
 
-        <!-- Product 3 -->
-        <div class="product-item" style="width: 45%;">
-          <img src="images/tmt-cutting.jpg" alt="TMT Cutting" style="width: 100%;" />
-          <h3 style="text-align: center;">TMT Cutting</h3>
-        </div>
+				<div class="product">
+					<img src="images/tmt-cutting.jpg" alt="TMT Cutting">
+					<h3>TMT Cutting</h3>
+				</div>
 
-        <!-- Product 4 -->
-        <div class="product-item" style="width: 45%;">
-          <img src="images/cast-iron.jpg" alt="Cast Iron" style="width: 100%;" />
-          <h3 style="text-align: center;">Cast Iron</h3>
-        </div>
+				<div class="product">
+					<img src="images/cast-iron.jpg" alt="Cast Iron">
+					<h3>Cast Iron</h3>
+				</div>
 
-        <!-- Product 5 -->
-        <div class="product-item" style="width: 45%;">
-          <img src="images/motor-scrap.jpg" alt="Motor Scrap" style="width: 100%;" />
-          <h3 style="text-align: center;">Motor Scrap</h3>
-        </div>
+				<div class="product">
+					<img src="images/motor-scrap.jpg" alt="Motor Scrap">
+					<h3>Motor Scrap</h3>
+				</div>
 
-        <!-- Product 6 -->
-        <div class="product-item" style="width: 45%;">
-          <img src="images/alloy-steel.jpg" alt="Alloy Steel" style="width: 100%;" />
-          <h3 style="text-align: center;">Alloy Steel</h3>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="product">
+					<img src="images/alloy-steel.jpg" alt="Alloy Steel">
+					<h3>Alloy Steel</h3>
+				</div>
 
-  <footer id="footer">
-    <div class="inner">
-      <ul class="contact">
-        <li><strong>Phone:</strong> +91 9814452000 | +91 9779705252</li>
-        <li><strong>Email:</strong> geraenterprises79@gmail.com</li>
-      </ul>
-    </div>
-  </footer>
+			</div>
+		</div>
+	</section>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="contact">
+				<li><strong>Phone:</strong> +91 9814452000 | +91 9779705252</li>
+				<li><strong>Email:</strong> geraenterprises79@gmail.com</li>
+			</ul>
+		</div>
+	</footer>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<style>
+		.grid-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 40px;
+			justify-items: center;
+		}
+
+		.product {
+			text-align: center;
+			width: 90%;
+		}
+
+		.product img {
+			width: 100%;
+			height: auto;
+			border-radius: 8px;
+		}
+
+		.product h3 {
+			margin-top: 10px;
+			font-size: 1.2em;
+			color: white;
+		}
+	</style>
 </body>
 </html>
