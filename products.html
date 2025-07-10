@@ -1,72 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products - Gera Enterprises</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="is-preload">
-    <!-- Header -->
-    <header id="header">
-      <h1><a href="index.html">Gera Enterprises</a></h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" class="active">Products</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products - Gera Enterprises</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    body {
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+    }
 
-    <!-- Main -->
-    <section id="main" class="wrapper">
-      <div class="inner">
-        <h2 class="major">Our Products</h2>
-        <div class="products-grid">
-          <div class="product">
-            <img src="images/hms-scrap.jpg" alt="HMS Scrap" />
-            <p>HMS Scrap</p>
-          </div>
-          <div class="product">
-            <img src="images/ms-plates.jpg" alt="MS Plates" />
-            <p>MS Plates</p>
-          </div>
-          <div class="product">
-            <img src="images/tmt-cutting.jpg" alt="TMT Cutting" />
-            <p>TMT Cutting</p>
-          </div>
-          <div class="product">
-            <img src="images/cast-iron.jpg" alt="Cast Iron" />
-            <p>Cast Iron</p>
-          </div>
-          <div class="product">
-            <img src="images/motor-scrap.jpg" alt="Motor Scrap" />
-            <p>Motor Scrap</p>
-          </div>
-          <div class="product">
-            <img src="images/alloy-steel.jpg" alt="Alloy Steel" />
-            <p>Alloy Steel</p>
-          </div>
-          <div class="product">
-            <img src="images/tmt-rolling.jpg" alt="TMT Rolling" />
-            <p>TMT Rolling</p>
-          </div>
-          <div class="product">
-            <img src="images/ms-rolling.jpg" alt="MS Rolling" />
-            <p>MS Rolling</p>
-          </div>
-          <div class="product">
-            <img src="images/gas-cut.jpg" alt="Gas Cut" />
-            <p>Gas Cut</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    .products-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
 
-    <!-- Footer -->
-    <footer id="footer">
-      <p>&copy; Gera Enterprises. All rights reserved.</p>
-    </footer>
-  </body>
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 40px;
+      justify-items: center;
+    }
+
+    .product-card {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      font-size: 18px;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    @media screen and (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .product-card {
+        max-width: 160px;
+        padding: 15px;
+      }
+
+      .product-card img {
+        height: 120px;
+      }
+
+      .product-card h3 {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <h1><a href="index.html">Gera Enterprises</a></h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products-header">
+    <h2>Our Products</h2>
+  </section>
+
+  <section class="products-grid">
+    <div class="product-card">
+      <img src="images/hms-scrap.jpg" alt="HMS Scrap" />
+      <h3>HMS Scrap</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/ms-plates.jpg" alt="MS Plates" />
+      <h3>MS Plates</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/tmt-cutting.jpg" alt="TMT Cutting" />
+      <h3>TMT Cutting</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/cast-iron.jpg" alt="Cast Iron" />
+      <h3>Cast Iron</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/motor-scrap.jpg" alt="Motor Scrap" />
+      <h3>Motor Scrap</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/alloy-steel.jpg" alt="Alloy Steel" />
+      <h3>Alloy Steel</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/tmt-rolling.jpg" alt="TMT Rolling" />
+      <h3>TMT Rolling</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/ms-rolling.jpg" alt="MS Rolling" />
+      <h3>MS Rolling</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/gas-cut.jpg" alt="Gas Cut Scrap" />
+      <h3>Gas Cut Scrap</h3>
+    </div>
+  </section>
+</body>
 </html>
