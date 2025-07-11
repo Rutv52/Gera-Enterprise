@@ -3,55 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gera Enterprises</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <title>Gera Enterprises - Ferrous and Non-Ferrous Trading</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora&display=swap" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 26px;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f5c842;
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .whatsapp-icon {
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+    }
+
+    .contact {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+  </style>
 </head>
-<body class="is-preload">
-
-  <!-- Hero Background -->
-  <div class="hero-bg">
-    <img src="images/background.jpg" alt="Background Image" class="bg-image">
-    <div class="overlay"></div>
-  </div>
-
-  <!-- Header -->
-  <header id="header">
+<body>
+  <header>
     <h1>Gera Enterprises</h1>
-    <p>Ferrous and Non-Ferrous Iron and Steel Trading</p>
-    <p>Established Since 46 Years</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav id="nav">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <section class="hero">
+    <h2>Ferrous and Non-Ferrous Iron and Steel Trading</h2>
+    <p>Established since 46 years</p>
+  </section>
 
-  <!-- Footer Contact Section -->
-  <footer id="footer" class="wrapper alt">
-    <div class="inner">
-      <h2>Contact Us</h2>
-      <p>Phone: +91 9814452000 | +91 9779705252</p>
-      <p>Email: geraenterprises79@gmail.com</p>
+  <section>
+    <h2>About Us</h2>
+    <p>
+      Gera Enterprises is a trusted trading company in the iron and steel industry,
+      offering quality ferrous and non-ferrous materials across India and abroad.
+      We are based in India and deal internationally as well.
+    </p>
+  </section>
 
-      <!-- WhatsApp Icons -->
-      <div style="margin-top: 15px;">
-        <a href="https://wa.me/919814452000" target="_blank">
-          <img src="images/whatsapp-icon.png" alt="WhatsApp 9814452000" style="width:40px; margin-right: 10px;">
-        </a>
-        <a href="https://wa.me/919779705252" target="_blank">
-          <img src="images/whatsapp-icon.png" alt="WhatsApp 9779705252" style="width:40px;">
-        </a>
-      </div>
+  <footer>
+    <div class="whatsapp-buttons">
+  <a href="https://wa.me/919814452000" target="_blank">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
+  </a>
+  <a href="https://wa.me/919779705252" target="_blank">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
+  </a>
+</div>
+    <div class="contact">
+      <p><strong>Contact Us:</strong></p>
+      <p>📞 +91 9814452000<br />📞 +91 9779705252</p>
+      <p>📧 geraenterprises79@gmail.com</p>
     </div>
+    <div>
+      <img src="images/whatsapp-icon.png" alt="WhatsApp 1" class="whatsapp-icon" />
+      <img src="images/whatsapp-icon.png" alt="WhatsApp 2" class="whatsapp-icon" />
+    </div>
+    <p style="font-size: 12px; color: #aaa;">&copy; 2025 Gera Enterprises. All rights reserved.</p>
   </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
