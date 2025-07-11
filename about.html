@@ -10,30 +10,33 @@
       margin: 0;
       background-color: #0e0e0e;
       font-family: 'Roboto', sans-serif;
-      color: white;
+      color: #f0f0f0;
     }
 
     header {
       background-color: black;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 20px 30px;
+      text-align: center;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
 
     header h1 {
       font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin: 0 15px;
       font-weight: bold;
       font-size: 16px;
       transition: color 0.3s ease;
@@ -44,26 +47,29 @@
     }
 
     section {
-      padding: 80px 25px;
+      padding: 80px 20px;
       max-width: 900px;
       margin: auto;
+      text-align: justify;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 25px;
+      font-size: 34px;
       font-family: 'Poppins', sans-serif;
-      color: white;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
     }
 
     p {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 1.8;
-      color: #e2e2e2;
+      color: #e0e0e0;
+      margin-bottom: 30px;
     }
 
     strong {
-      color: white;
+      color: #ffffff;
     }
 
     footer {
@@ -75,18 +81,17 @@
     }
 
     @media screen and (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
       nav a {
-        margin: 0 10px 10px 0;
         display: inline-block;
+        margin: 10px 10px;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      p {
+        font-size: 18px;
       }
     }
   </style>
@@ -104,13 +109,13 @@
   <section>
     <h2>About Us</h2>
     <p>
-      Gera Enterprises is a trusted name in the Iron and Steel trading industry, proudly established in 1979. With over <strong>46 years of experience</strong>, we have built a solid reputation for quality, commitment, and reliability.
+      Gera Enterprises is a trusted name in the Iron and Steel trading industry, proudly established in 1979. With over <strong>46 years of experience</strong>, we have built a strong reputation based on quality, commitment, and trust.
     </p>
     <p>
-      We specialize in Ferrous and Non-Ferrous metal trading, including materials like HMS Scrap, MS Plates, TMT Cutting, Cast Iron, Alloy Steel, and more. Our professional approach, long-standing industry relationships, and timely delivery have helped us serve clients both in India and internationally.
+      We specialize in Ferrous and Non-Ferrous metal trading. Our inventory includes HMS Scrap, MS Plates, TMT Cutting, Cast Iron, Alloy Steel, and more — supplying across multiple sectors and industries.
     </p>
     <p>
-      We are based in India and deal internationally with clients in multiple sectors, delivering reliable solutions in scrap and structural materials. Our goal is to maintain long-term partnerships through trust and transparency.
+      Based in India, we serve both domestic and international clients. Our approach is focused, transparent, and long-term. Whether you're looking for reliable sourcing or bulk scrap supply, Gera Enterprises is the name you can count on.
     </p>
   </section>
 
