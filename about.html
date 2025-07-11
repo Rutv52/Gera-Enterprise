@@ -1,116 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us - Gera Enterprises</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Montserrat', sans-serif;
       background-color: #0e0e0e;
-      color: #f0f0f0;
-      line-height: 1.6;
-      padding-top: 80px;
+      font-family: 'Roboto', sans-serif;
+      color: white;
     }
 
     header {
-      background-color: #111;
-      padding: 20px 0;
-      text-align: center;
-      border-bottom: 1px solid #333;
+      background-color: black;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    nav {
-      text-align: center;
-      padding: 15px 0;
-      background-color: #0e0e0e;
+      font-size: 22px;
     }
 
     nav a {
-      color: #ffffff;
+      color: white;
       text-decoration: none;
-      margin: 0 20px;
-      font-weight: 600;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 16px;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #00ccff;
+      color: #f5c842;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
+    section {
+      padding: 80px 25px;
+      max-width: 900px;
+      margin: auto;
     }
 
-    .container h2 {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-      color: #00ccff;
+    h2 {
+      font-size: 32px;
+      margin-bottom: 25px;
+      font-family: 'Poppins', sans-serif;
+      color: white;
     }
 
-    .container p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
-      color: #dddddd;
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #e2e2e2;
+    }
+
+    strong {
+      color: white;
     }
 
     footer {
+      background-color: black;
+      padding: 40px 20px;
       text-align: center;
-      padding: 30px 0;
-      background-color: #111;
-      color: #777;
-      font-size: 0.9rem;
+      color: #888;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        margin: 0 10px 10px 0;
+        display: inline-block;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Gera Enterprises</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
 
-  <header style="background: black; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; position: sticky; top: 0; z-index: 1000;">
-  <h1 style="margin: 0; font-family: 'Poppins', sans-serif; font-size: 22px; color: white;">Gera Enterprises</h1>
-  <nav style="display: flex; gap: 20px;">
-    <a href="index.html" style="color: white; font-weight: bold; text-decoration: none;">Home</a>
-    <a href="products.html" style="color: white; font-weight: bold; text-decoration: none;">Products</a>
-    <a href="about.html" style="color: white; font-weight: bold; text-decoration: none;">About</a>
-  </nav>
-</header>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-  </nav>
-
-  <div class="container">
+  <section>
     <h2>About Us</h2>
     <p>
       Gera Enterprises is a trusted name in the Iron and Steel trading industry, proudly established in 1979. With over <strong>46 years of experience</strong>, we have built a solid reputation for quality, commitment, and reliability.
     </p>
     <p>
-      We specialize in Ferrous and Non-Ferrous metal trading, including materials like HMS Scrap, MS Plates, TMT Cutting, Cast Iron, Alloy Steel, and more. Our professional approach, long-standing industry relationships, and timely delivery have helped us serve hundreds of satisfied clients.
+      We specialize in Ferrous and Non-Ferrous metal trading, including materials like HMS Scrap, MS Plates, TMT Cutting, Cast Iron, Alloy Steel, and more. Our professional approach, long-standing industry relationships, and timely delivery have helped us serve clients both in India and internationally.
     </p>
     <p>
-      Based in India, Gera Enterprises proudly deals with both national and international clients. We are committed to delivering high-quality materials, transparent pricing, and long-term partnerships in the iron and steel trading world.
+      We are based in India and deal internationally with clients in multiple sectors, delivering reliable solutions in scrap and structural materials. Our goal is to maintain long-term partnerships through trust and transparency.
     </p>
-    <p>
-      Whether you're looking for premium-grade scrap materials or structured supply for industrial needs, Gera Enterprises is your reliable partner.
-    </p>
-  </div>
+  </section>
 
   <footer>
-    &copy; 2025 Gera Enterprises. All Rights Reserved.
+    &copy; 2025 Gera Enterprises. All rights reserved.
   </footer>
-
 </body>
 </html>
