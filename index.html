@@ -2,125 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gera Enterprises - Ferrous and Non-Ferrous Trading</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora&display=swap" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Lora', serif;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-
-    header {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 26px;
-      margin: 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #f5c842;
-    }
-
-    section {
-      padding: 100px 20px;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .hero h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .whatsapp-icon {
-      width: 40px;
-      height: 40px;
-      margin: 10px;
-    }
-
-    .contact {
-      font-size: 18px;
-      margin-top: 20px;
-      line-height: 1.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gera Enterprises - Ferrous & Non-Ferrous Scrap Trading</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-  <header>
+
+  <!-- Header -->
+  <header id="header">
     <h1>Gera Enterprises</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Ferrous and Non-Ferrous Iron and Steel Trading</h2>
-    <p>Established since 46 years</p>
+  <!-- Hero Section -->
+  <section id="banner">
+    <div class="content">
+      <h2>Ferrous and Non-Ferrous Iron and Steel Trading</h2>
+      <p>Established Since 46 Years</p>
+      <p>Call us: +91 9814452000, +91 9779705252</p>
+      <p>Email: geraenterprises79@gmail.com</p>
+    </div>
   </section>
 
-  <section>
-    <h2>About Us</h2>
-    <p>
-      Gera Enterprises is a trusted trading company in the iron and steel industry,
-      offering quality ferrous and non-ferrous materials across India and abroad.
-      We are based in India and deal internationally as well.
-    </p>
+  <!-- About Us Section -->
+  <section id="about" class="wrapper">
+    <div class="inner">
+      <h2>About Us</h2>
+      <p>Gera Enterprises is a trusted name in iron and steel scrap trading, operating pan India and internationally. With over 46 years of excellence, we deal in ferrous and non-ferrous scrap materials. Our long-standing commitment to quality and reliability makes us a preferred partner in the industry.</p>
+    </div>
   </section>
 
-  <footer>
-    <div class="whatsapp-buttons">
-  <a href="https://wa.me/919814452000" target="_blank">
-    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
-  </a>
-  <a href="https://wa.me/919779705252" target="_blank">
-    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
-  </a>
-</div>
-    <div class="contact">
-      <p><strong>Contact Us:</strong></p>
-      <p>📞 +91 9814452000<br />📞 +91 9779705252</p>
-      <p>📧 geraenterprises79@gmail.com</p>
+  <!-- Products Preview -->
+  <section id="preview" class="wrapper style1 special">
+    <div class="inner">
+      <h2>We Deal In</h2>
+      <ul class="icons major">
+        <li><span class="icon solid style1 major fa-truck"></span><br>HMS Scrap</li>
+        <li><span class="icon solid style2 major fa-industry"></span><br>MS Plates</li>
+        <li><span class="icon solid style3 major fa-cut"></span><br>TMT Cutting</li>
+        <li><span class="icon solid style4 major fa-cogs"></span><br>Cast Iron</li>
+        <li><span class="icon solid style5 major fa-car"></span><br>Motor Scrap</li>
+        <li><span class="icon solid style6 major fa-toolbox"></span><br>Alloy Steel</li>
+      </ul>
     </div>
-    <div>
-      <img src="images/whatsapp-icon.png" alt="WhatsApp 1" class="whatsapp-icon" />
-      <img src="images/whatsapp-icon.png" alt="WhatsApp 2" class="whatsapp-icon" />
+  </section>
+
+  <!-- WhatsApp Buttons (Replaced Section) -->
+  <section id="whatsapp-section" class="wrapper">
+    <div class="inner">
+      <div class="whatsapp-buttons">
+        <a href="https://wa.me/919814452000" target="_blank">
+          <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
+        </a>
+        <a href="https://wa.me/919779705252" target="_blank">
+          <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
+        </a>
+      </div>
     </div>
-    <p style="font-size: 12px; color: #aaa;">&copy; 2025 Gera Enterprises. All rights reserved.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+      <p>&copy; 2025 Gera Enterprises. All rights reserved.</p>
+    </div>
   </footer>
+
 </body>
 </html>
