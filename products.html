@@ -10,6 +10,7 @@
       background-color: #0f0f0f;
       font-family: 'Montserrat', sans-serif;
       color: white;
+      margin: 0;
       padding-top: 80px;
     }
 
@@ -17,6 +18,10 @@
       background-color: #000;
       padding: 20px 0;
       text-align: center;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     header h1 {
@@ -37,13 +42,9 @@
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     .products-header {
       text-align: center;
-      padding: 40px 20px 10px;
+      padding: 60px 20px 20px;
     }
 
     .products-grid {
@@ -102,12 +103,6 @@
       .product-card h3 {
         font-size: 14px;
       }
-
-      nav a {
-        display: inline-block;
-        margin: 0 10px;
-        font-size: 14px;
-      }
     }
   </style>
 </head>
@@ -152,17 +147,4 @@
       <h3>Alloy Steel</h3>
     </div>
     <div class="product-card">
-      <img src="images/tmt-rolling.jpg" alt="TMT Rolling" />
-      <h3>TMT Rolling</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/ms-rolling.jpg" alt="MS Rolling" />
-      <h3>MS Rolling</h3>
-    </div>
-    <div class="product-card">
-      <img src="images/gas-cut.jpg" alt="Gas Cut Scrap" />
-      <h3>Gas Cut Scrap</h3>
-    </div>
-  </section>
-</body>
-</html>
+      <img src="images/tmt-rolling.jpg" alt="TMT
