@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gera Enterprises - Ferrous & Non-Ferrous Trading</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora&display=swap" rel="stylesheet">
+  <title>Gera Enterprises - Ferrous and Non-Ferrous Trading</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora&display=swap" />
   <style>
     body {
       margin: 0;
@@ -16,10 +16,11 @@
 
     header {
       background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px 30px;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -27,17 +28,23 @@
 
     header h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: 26px;
+      font-size: 24px;
       margin: 0;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: nowrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
       font-weight: bold;
-      transition: color 0.3s;
       font-size: 16px;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -45,59 +52,58 @@
     }
 
     section {
-      min-height: 100vh;
-      padding: 80px 20px;
+      padding: 100px 20px;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.4);
     }
 
     .hero h2 {
       font-family: 'Poppins', sans-serif;
-      font-size: 42px;
-      margin-bottom: 15px;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 22px;
-    }
-
-    .about-content {
-      max-width: 800px;
-      margin: auto;
-      font-size: 18px;
-      line-height: 1.7;
+      font-size: 20px;
     }
 
     footer {
       text-align: center;
-      padding: 50px 20px;
-      background-color: rgba(0, 0, 0, 0.85);
-    }
-
-    .whatsapp-buttons {
-      margin: 20px 0;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.8);
     }
 
     .whatsapp-icon {
       width: 40px;
       height: 40px;
-      margin: 0 10px;
-      vertical-align: middle;
+      margin: 10px;
     }
 
     .contact {
       font-size: 18px;
+      margin-top: 20px;
       line-height: 1.6;
-      margin-top: 10px;
     }
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 28px;
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .about-content {
-        font-size: 16px;
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      header h1 {
+        font-size: 22px;
       }
     }
   </style>
@@ -119,33 +125,28 @@
 
   <section>
     <h2>About Us</h2>
-    <div class="about-content">
-      <p>
-        Gera Enterprises is a trusted iron and steel trading company, dealing in both ferrous and non-ferrous materials.
-        With 46 years of legacy, we have built a strong presence across India and also cater to global markets.
-        We provide quality materials like HMS scrap, MS plates, cast iron, and more with honesty and long-term business values.
-        Based in India, we also proudly trade internationally, ensuring premium supply and reliability.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <p><strong>Phone:</strong> +91 9814452000 | +91 9779705252</p>
-      <p><strong>Email:</strong> geraenterprises79@gmail.com</p>
-    </div>
-    <div class="whatsapp-buttons">
-      <a href="https://wa.me/919814452000" target="_blank">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp 1" class="whatsapp-icon">
-      </a>
-      <a href="https://wa.me/919779705252" target="_blank">
-        <img src="images/whatsapp-icon.png" alt="WhatsApp 2" class="whatsapp-icon">
-      </a>
-    </div>
+    <p>
+      Gera Enterprises is a trusted iron and steel trading company, dealing in both ferrous and non-ferrous materials.
+      With 46 years of legacy, we have built a strong presence across India and also cater to global markets. We provide
+      quality materials like HMS scrap, MS plates, cast iron, and more with honesty and long-term business values. Based
+      in India, we also proudly trade internationally, ensuring premium supply and reliability.
+    </p>
   </section>
 
   <footer>
+    <div class="whatsapp-buttons">
+      <a href="https://wa.me/919814452000" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
+      </a>
+      <a href="https://wa.me/919779705252" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp" class="whatsapp-icon">
+      </a>
+    </div>
+    <div class="contact">
+      <p><strong>Contact Us:</strong></p>
+      <p>📞 +91 9814452000<br />📞 +91 9779705252</p>
+      <p>📧 geraenterprises79@gmail.com</p>
+    </div>
     <p style="font-size: 12px; color: #aaa;">&copy; 2025 Gera Enterprises. All rights reserved.</p>
   </footer>
 </body>
