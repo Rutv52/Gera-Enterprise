@@ -4,31 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Products - Gera Enterprises</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      background-color: #0f0f0f;
-      font-family: 'Montserrat', sans-serif;
+      background-color: #000;
+      font-family: 'Poppins', sans-serif;
       color: white;
       margin: 0;
       padding-top: 80px;
     }
 
     header {
-      background-color: #000;
-      padding: 20px 0;
-      text-align: center;
       position: fixed;
       top: 0;
       width: 100%;
+      background-color: #1a1a1a;
+      padding: 20px 0;
+      text-align: center;
       z-index: 1000;
     }
 
     header h1 {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
       font-size: 28px;
       color: white;
+      font-weight: 600;
     }
 
     nav {
@@ -39,7 +39,12 @@
       color: white;
       text-decoration: none;
       margin: 0 15px;
-      font-weight: bold;
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .products-header {
@@ -79,9 +84,10 @@
     }
 
     .product-card h3 {
-      font-size: 18px;
+      font-size: 16px;
       margin: 0;
-      color: #ffffff;
+      color: #fff;
+      letter-spacing: 1px;
     }
 
     @media screen and (max-width: 600px) {
@@ -101,7 +107,7 @@
       }
 
       .product-card h3 {
-        font-size: 14px;
+        font-size: 13px;
       }
     }
   </style>
@@ -118,7 +124,7 @@
   </header>
 
   <section class="products-header">
-    <h2>Our Products</h2>
+    <h2 style="font-weight: 500;">Our Products</h2>
   </section>
 
   <section class="products-grid">
@@ -147,4 +153,17 @@
       <h3>Alloy Steel</h3>
     </div>
     <div class="product-card">
-      <img src="images/tmt-rolling.jpg" alt="TMT
+      <img src="images/tmt-rolling.jpg" alt="TMT Rolling" />
+      <h3>TMT Rolling</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/ms-rolling.jpg" alt="MS Rolling" />
+      <h3>MS Rolling</h3>
+    </div>
+    <div class="product-card">
+      <img src="images/gas-cut.jpg" alt="Gas Cut Scrap" />
+      <h3>Gas Cut Scrap</h3>
+    </div>
+  </section>
+</body>
+</html>
